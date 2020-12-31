@@ -1,0 +1,32 @@
+# **Description**
+
+*Include at least 1 sentence detailing the scope of work done and the bug it seeks to fix or feature it aims to add.*
+*If it is a bug fix, identity whether or not this work is related to an outstanding issue.*
+
+# **Type of change**
+
+*Please delete options that are not relevant.*
+
+- [ ]  Bug fix (non-breaking change which fixes an issue)
+- [ ]  This change requires a documentation update
+
+# **How Has This Been Tested?**
+
+Specify how your code has been checked to confirm it preforms as expected.
+
+# **Checklist:**
+
+*Must check:*
+
+- [ ]  My code follows the style guidelines of this project
+- [ ]  I have performed a self-review of my own code
+- [ ]  My changes generate no new warnings
+- [ ]  I confirm the code does not have any linting warnings or errors.
+
+*Optional, check if applicable:*
+
+- [ ]  I have commented my code, particularly in hard-to-understand areas
+- [ ]  I have made corresponding changes to the documentation
+- [ ]  I have added tests that prove my fix is effective or that my feature works
+- [ ]  New and existing unit tests pass locally with my changes
+- [ ]  Any dependent changes have been merged and published in downstream modules
