@@ -1,6 +1,4 @@
-# react
-
-### react repo
+# React Repo 
 
 This repository is for the front end of the website. We will be using Recoil as our state management system.
 
