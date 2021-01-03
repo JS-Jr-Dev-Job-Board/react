@@ -11,6 +11,7 @@ We will be using Recoil as our state management system.
 <summary>Expand to see full list</summary>
 
 + Coming soon!
-+ Fill in
-+ Fill in
++ When adding dependencies, please keep the list alphabetical and add the version number
++ Check the node-web-scraper repo for details, thank you!
++ add dependency
 </details>
