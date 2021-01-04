@@ -16,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/JS-Jr-Dev-Job-Board/react/issues"
   },
-  "homepage": "https://github.com/JS-Jr-Dev-Job-Board/react#readme"
+  "homepage": "https://github.com/JS-Jr-Dev-Job-Board/react#readme",
+  "dependencies": {}
 }
