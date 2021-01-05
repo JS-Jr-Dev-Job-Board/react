@@ -15,3 +15,5 @@ We will be using Recoil as our state management system.
 + Check the node-web-scraper repo for details, thank you!
 + add dependency
 </details>
+
+[About the team](https://github.com/JS-Jr-Dev-Job-Board/About/blob/main/README.md)
