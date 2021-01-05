@@ -3,10 +3,24 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
+import theme from './theme';
+import { Auth0Provider } from '@auth0/auth0-react'; 
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <Auth0Provider
+        domain="YOUR_DOMAIN"
+        clientId="YOUR_CLIENT_ID"
+        redirectUri={window.location.origin}
+      >
+        <Router>
+          <App />
+        </Router>
+      </Auth0Provider>
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
