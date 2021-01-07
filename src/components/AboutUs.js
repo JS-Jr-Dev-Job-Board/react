@@ -7,6 +7,16 @@ import {
     useRecoilValue,
   } from 'recoil';
 
+//  Create a state to hold everyone on the team. For now we'll pass in an object, later we'll fetch it from an api first
+const teamState = atom({
+    key: 'teamState',
+    default: [
+        {
+            
+        }
+    ]
+})
+
 function AboutUs() {
 
     return (
@@ -18,3 +28,5 @@ function AboutUs() {
         </div>
     )
 }
+
+export default AboutUs;
