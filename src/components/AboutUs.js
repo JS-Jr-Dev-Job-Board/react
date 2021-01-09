@@ -34,9 +34,8 @@ function AboutUs() {
 
     return (
         <div className = "About-Us">
-            {/* We might need to move the RecoilRoot bit into the index folder, as it's suppsed to be in the root component. That's easy to change, but I didn't want to possibly conflict with any of the other branches out right now */}   
                 <h1>About Us</h1>
-                <h4>This is a team of motivated Lambda School students who care about the field they are entering and helping other junior devs find a quality first job!</h4>
+                <h4>This is a team of motivated Lambda School students who care about the field they are entering and helping other junior devs find a quality first job! Read About Our Talented Team Below:</h4>
                 {teamMembers.map((teamMember) => (
                     <TeamMember key = {teamMember.id} member = {teamMember} />
                 ))}
