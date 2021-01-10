@@ -15,8 +15,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <LoginBtn></LoginBtn>
         <ComingSoon>Future Home of Something Great</ComingSoon>
         <Teaser>Get Excited 😲</Teaser>
+        <LogoutBtn></LogoutBtn>
       </header>
     </div>
   );
