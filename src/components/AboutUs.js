@@ -6,6 +6,7 @@ import {
     useRecoilState,
     useRecoilValue,
   } from 'recoil';
+import styled from 'styled-components';
 
 //  Create a state to hold everyone on the team. For now we'll pass in an object, later we'll fetch it from an api first
 const teamMemberState = atom({
@@ -32,17 +33,24 @@ const teamMemberState = atom({
 function AboutUs() {
     const teamMembers = useRecoilValue(teamMemberState);
 
+    const Container = styled.div`
+        display: flex;
+        background: #eee;
+        `;
+
+    const Teaser = styled.h4`
+        color: ${pr => pr.theme.white};
+        `;
+
+
     return (
-        <div className = "About-Us">
-            {/* We might need to move the RecoilRoot bit into the index folder, as it's suppsed to be in the root component. That's easy to change, but I didn't want to possibly conflict with any of the other branches out right now */}
-            <RecoilRoot>    
+        <Container>
                 <h1>About Us</h1>
-                <h4>A blurb</h4>
+                <Teaser>This is a team of motivated Lambda School students who care about the field they are entering and helping other junior devs find a quality first job! Read About Our Talented Team Below:</Teaser>
                 {teamMembers.map((teamMember) => (
                     <TeamMember key = {teamMember.id} member = {teamMember} />
                 ))}
-            </RecoilRoot>
-        </div>
+        </Container>
     )
 }
 
