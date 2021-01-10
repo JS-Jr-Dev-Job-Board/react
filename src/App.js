@@ -1,9 +1,13 @@
 import "./App.css";
+import React from "react";
 import styled from "styled-components";
-import LoginBtn from "./components/LoginBtn";
-import LogoutBtn from "./components/LogoutBtn";
 import { useRecoilState } from "recoil";
 import { testState } from "./store/atom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+//import components here:
+import LoginBtn from "./components/LoginBtn";
+import LogoutBtn from "./components/LogoutBtn";
+import Portfolio from "./components/Portfolio.jsx";
 
 const ComingSoon = styled.h1`
   color: ${(pr) => pr.theme.primaryColor};
@@ -14,13 +18,12 @@ const Teaser = styled.p`
 
 function App() {
   const [test, setTest] = useRecoilState(testState);
-
   return (
     <div className="App">
       <header className="App-header">
         <ComingSoon>Future Home of Something Great</ComingSoon>
         <Teaser>Get Excited 😲</Teaser>
-        <Teaser>{test}</Teaser>
+        <Teaser> This is a "{test}" of Recoil State</Teaser>
       </header>
     </div>
   );
