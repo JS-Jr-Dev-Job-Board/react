@@ -3,6 +3,7 @@ import styled from "styled-components";
 //import components
 import LoginBtn from "./LoginBtn";
 import LogoutBtn from "./LogoutBtn";
+import Signin from "./Signin";
 
 const ComingSoon = styled.h1`
   color: ${(pr) => pr.theme.primaryColor};
@@ -19,6 +20,7 @@ const Home = () => {
         <Teaser>Get Excited 😲</Teaser>
         <LoginBtn></LoginBtn>
         <LogoutBtn></LogoutBtn>
+        <Signin />
       </header>
     </div>
   );
