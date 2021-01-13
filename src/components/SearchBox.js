@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FormField, TextInput, Grommet } from 'grommet';
+import { Form, FormField, TextInput, Grommet } from 'grommet';
 
 const allJobs = [
   {
@@ -43,37 +43,32 @@ const SearchBox = (props) => {
     e.preventDefault();
 
     setSearchResults([]);
-    alert("enter was hit");
 
-    const emptyArr = [];
+    const searchMatches = [];
     allJobs.forEach((job) => {
       for (let item in job) {
         if (job[item].toLowerCase().includes(searchInput.toLowerCase())) {
-          emptyArr.push(job);
+          searchMatches.push(job);
         }
       }
     });
-    setSearchResults(emptyArr);
+    setSearchResults(searchMatches);
   };
 
   return (
-    <>
-      <h3>Search</h3>
-      <FormField onSubmit={onSubmit} className={props.class || 'searchBar'}>
-        <label htmlFor={searchInfo} style={{ display: "none" }}>
-          {" "}
-          Search Box{" "}
-        </label>
-        <TextInput
-          name={searchInfo}
-          id={searchInfo}
-          type="text"
-          placeholder={props.placeholder || "Search"}
-          value={searchInput}
-          onChange={onChange}
-        />
-      </FormField>
-    </>
+      <Form onSubmit={onSubmit}>
+        <FormField label='Search' htmlFor={searchInfo}>
+          <TextInput
+            a11yTitle='Search Box Text Field'
+            name={searchInfo}
+            id={searchInfo}
+            type="text"
+            placeholder={props.placeholder || "Search"}
+            value={searchInput}
+            onChange={onChange}
+            />
+        </FormField>
+      </Form>
   );
 };
 

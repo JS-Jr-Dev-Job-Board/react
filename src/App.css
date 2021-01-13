@@ -26,3 +26,7 @@
 .App-link {
   color: #61dafb;
 }
+
+formField.label {
+  font-size: 3rem;
+}
