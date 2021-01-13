@@ -7,6 +7,8 @@ import Jobs from "./Jobs";
 import Portfolio from "./Portfolio";
 import Home from "./Home";
 
+// look at using this tutorial to make this work properly: https://www.youtube.com/watch?v=fL8cFqhTHwA
+
 const NavBar = () => {
   return (
     <div>
