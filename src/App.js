@@ -3,7 +3,7 @@ import React from "react";
 import { useRecoilState } from "recoil";
 import { testState } from "./store/atom";
 //import components here:
-import NavBar from "./components/NavBar";
+import NavBar from "./components/Navbar/Navbar";
 
 function App() {
   const [test, setTest] = useRecoilState(testState);
