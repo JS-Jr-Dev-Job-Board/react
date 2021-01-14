@@ -22,7 +22,7 @@ const Navbar = () => {
       <Router>
       <nav className="NavbarItems">
         <h1 className="NavbarLogo">
-          React<i className="fab fa-react"></i>
+          Jr Dev Jobs<i className="fab fa-react"></i>
         </h1>
         <div className="menu-icon" onClick={onSubmit}>
           <i className={on ? "fas fa-times" : "fas fa-bars"}></i>
