@@ -2,8 +2,22 @@ import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
 //Style Imports
-// import styled from "styled-components";
-import { Grommet } from "grommet";
+import {
+  Box,
+  Button,
+  Card,
+  Grommet,
+  Form,
+  Heading,
+  Image,
+  FormField,
+  TextInput,
+} from "grommet";
+import { grommet } from "grommet/themes";
+
+//Image Imports
+import tempSigninImage from "../assets/tempSigninImage.jpg";
+
 //STYLE
 
 const Signup = () => {
@@ -27,15 +41,18 @@ const Signup = () => {
 
   return (
     <>
-      <div>
-        <Grommet plain>
-          <section>
-            <h1>Sign In</h1>
+      <Grommet theme={grommet}>
+        <Box height="medium" width="medium" responsive="true">
+          <Image fit="cover" src={tempSigninImage} />
+        </Box>
+        <Card pad="large" margin="large" responsive="true" align="center">
+          <Box>
+            <Heading>Sign In</Heading>
 
-            <form onSubmit={handleSubmit(onSubmit)}>
-              <label>
-                Email
-                <input
+            <Form align="center" onSubmit={handleSubmit(onSubmit)}>
+              {/* If we want to have email above the field, place (label="Email") into FormField below */}
+              <FormField name="email">
+                <TextInput
                   ref={register({
                     required: "Email is required",
                     minLength: { value: 6, message: "Email is too Short" },
@@ -44,13 +61,13 @@ const Signup = () => {
                   placeholder="Email"
                   name="email"
                 />
-              </label>
+              </FormField>
               {errors.email && <p>{errors.email.message}</p>}
               <br />
-
-              <label>
-                Password
-                <input
+              <br />
+              {/* If we want to have email above the field, place (label="Password") into FormField below */}
+              <FormField name="password">
+                <TextInput
                   ref={register({
                     required: "Password is required",
                     minLength: { value: 12, message: "Password is too Short" },
@@ -59,32 +76,48 @@ const Signup = () => {
                   placeholder="Password"
                   name="password"
                 />
-              </label>
+              </FormField>
               {errors.password && <p>{errors.password.message}</p>}
-              {/* Button Disabled is not needed as it doesn't allow anything to be sent without having the correct amount of info attached.  */}
-              <button>Submit</button>
+              {/* Button Disabled is not needed as react-form-hook doesn't allow anything to be sent without having the correct amount of info attached.  */}
+              <br />
+              <Button
+                focusIndicator="false"
+                type="reset"
+                label="Submit"
+                primary
+              />
               <br />
               {/* This needs to be Linked via Link once Sign up exists */}
+              <br />
               <a href="#">Don't have an account? Sign up</a>
-            </form>
-          </section>
-        </Grommet>
-      </div>
+            </Form>
+          </Box>
+        </Card>
+      </Grommet>
     </>
   );
 };
 export default Signup;
 
-//How do you post the data to the backend in axios?
-//How do you import fonts?
-//I tried // import { injectGlobal } from "styled-components";
-
-//Fonts
-// injectGlobal`@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300;400;500;600;700&display=swap');
-// `;
-//Error "Attempted import error: 'injectGlobal' is not exported from 'styled-components'."
-//"BigFont"      font-family: 'Bebas Neue', cursive;
-//"smallerFont"  font-family: 'Rajdhani', sans-serif;
-
-//Have you started cypress?
-//How are you attaching the contribution form?
+//The form validation no longer works. React-Hook-Form.
+//Example
+// () => {
+//   const [value, setValue] = React.useState({});
+//   return (
+//     <Form
+//       value={value}
+//       onChange={nextValue => setValue(nextValue)}
+//       onReset={() => setValue({})}
+//       onSubmit={({ value }) => {}}
+//     >
+//       <FormField name="name" htmlFor="text-input-id" label="Name">
+//         <TextInput id="text-input-id" name="name" errors="Passord is required"/>
+//       </FormField>
+//       <Box direction="row" gap="medium">
+//         <Button type="submit" primary label="Submit" />
+//         <Button type="reset" label="Reset" />
+//       </Box>
+//     </Form>
+//   );
+// }
+//Image next to it.
