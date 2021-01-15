@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <SearchBox placeholder='TEST' name='asdf'/>
+        <SearchBox />
         <ComingSoon>Future Home of Something Great</ComingSoon>
         <Teaser>Get Excited 😲</Teaser>
         <LoginBtn></LoginBtn>
