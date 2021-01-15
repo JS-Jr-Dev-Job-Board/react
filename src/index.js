@@ -14,11 +14,9 @@ import {
   useRecoilState,
   useRecoilValue,
 } from "recoil";
-import { Grommet } from "grommet";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Grommet plain>
       <ThemeProvider theme={theme}>
         <RecoilRoot>
           <Auth0Provider
@@ -32,7 +30,6 @@ ReactDOM.render(
           </Auth0Provider>
         </RecoilRoot>
       </ThemeProvider>
-    </Grommet>
   </React.StrictMode>,
   document.getElementById("root")
 );
