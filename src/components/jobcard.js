@@ -10,7 +10,7 @@ import {
   
 } from "grommet";
 import { grommet } from "grommet/themes";
-import GrommetTheme from "../theme/grommetTheme"
+// import GrommetTheme from "../theme/grommetTheme"
 
 //job card is what shows up nce the user clicks on a specific job from the search results
 //job card is what happens once you do an axios call to get that specific job

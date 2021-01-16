@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { Form, FormField, TextInput, Grommet } from 'grommet';
+import { Box, Form, FormField, TextInput, Grommet } from "grommet";
+import { grommet } from "grommet/themes";
+import { deepMerge } from "grommet/utils";
 
 const allJobs = [
   {
@@ -28,10 +30,27 @@ const allJobs = [
   },
 ];
 
+const customTheme = deepMerge(grommet, {
+  global: {
+    colors: {
+      "asdf": {
+        light: "tomato",
+        dark: "blue",
+      },
+    },
+  },
+  formField: {
+    border:{
+      color: 'asdf'
+    }
+  },
+  "spacing": 8,
+});
+
 const SearchBox = (props) => {
   const [searchInput, setSearchInput] = useState("");
   const [searchResults, setSearchResults] = useState([]);
-  const searchInfo = props.name ? props.name : 'searchBox';
+  const searchInfo = props.name ? props.name : "searchBox";
 
   console.log(">>>>>>>>>>>>>>>>>>", searchResults);
 
@@ -56,19 +75,25 @@ const SearchBox = (props) => {
   };
 
   return (
-      <Form onSubmit={onSubmit}>
-        <FormField label='Search' htmlFor={searchInfo}>
-          <TextInput
-            a11yTitle='Search Box Text Field'
-            name={searchInfo}
-            id={searchInfo}
-            type="text"
-            placeholder={props.placeholder || "Search"}
-            value={searchInput}
-            onChange={onChange}
+    <Grommet themeMode='dark' theme={customTheme}>
+      <Box>
+        <Form onSubmit={onSubmit}>
+          <FormField label="Search" htmlFor={searchInfo}>
+            <TextInput
+              size="small"
+              width="small"
+              a11yTitle="Search Box Text Field"
+              name={searchInfo}
+              id={searchInfo}
+              type="text"
+              placeholder={props.placeholder || "Search"}
+              value={searchInput}
+              onChange={onChange}
             />
-        </FormField>
-      </Form>
+          </FormField>
+        </Form>
+      </Box>
+    </Grommet>
   );
 };
 
