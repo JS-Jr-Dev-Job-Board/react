@@ -37,6 +37,9 @@ const customTheme = deepMerge(grommet, {
         light: "tomato",
         dark: "blue",
       },
+      size: {
+        'full': '50%'
+      }
     },
   },
   formField: {
@@ -44,7 +47,6 @@ const customTheme = deepMerge(grommet, {
       color: 'asdf'
     }
   },
-  "spacing": 8,
 });
 
 const SearchBox = (props) => {
@@ -76,7 +78,7 @@ const SearchBox = (props) => {
 
   return (
     <Grommet themeMode='dark' theme={customTheme}>
-      <Box>
+      <Box width="50%" alignSelf='center'  animation="jiggle">
         <Form onSubmit={onSubmit}>
           <FormField label="Search" htmlFor={searchInfo}>
             <TextInput
