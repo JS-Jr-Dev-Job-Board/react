@@ -12,7 +12,7 @@ Box,
 Grid,
 Heading } from 'grommet'
 import { grommet } from "grommet/themes";
-import GrommetTheme from "../theme/grommetTheme"
+// import GrommetTheme from "../theme/grommetTheme"
 
 const jobCardState = atom({
   key: "jobCardState",
