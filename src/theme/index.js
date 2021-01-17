@@ -1,6 +1,3 @@
-//"BigFont"      font-family: 'Bebas Neue', cursive;
-//"smallerFont"  font-family: 'Rajdhani', sans-serif;
-
 // Starting Theme
 
 const theme = {

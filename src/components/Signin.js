@@ -1,6 +1,6 @@
 import axios from "axios";
-import React from "react";
-import { useForm } from "react-hook-form";
+import React, { useState } from "react";
+//import { useForm } from "react-hook-form"; //
 //Style Imports
 import {
   Box,
@@ -11,7 +11,7 @@ import {
   Heading,
   Image,
   FormField,
-  TextInput,
+  Grid,
 } from "grommet";
 import { grommet } from "grommet/themes";
 
@@ -19,10 +19,23 @@ import { grommet } from "grommet/themes";
 import tempSigninImage from "../assets/tempSigninImage.jpg";
 
 //STYLE
+// const SImage = styled(Image)`
+//   width: 100%;
+// `;
 
 const Signup = () => {
   //STATE
-  const { register, handleSubmit, errors } = useForm();
+  const [form, setForm] = useState({
+    email: "",
+    password: "",
+  });
+
+  //CHANGE
+  const change = (e) => {
+    const { value, name } = e.target;
+    const valueToUse = value;
+    setForm({ ...form, [name]: valueToUse });
+  };
 
   //ONSUBMIT-- Recoil, plus react-hook-form
   const onSubmit = (data) => {
@@ -37,69 +50,94 @@ const Signup = () => {
     console.log(data);
   };
 
-  //JSX- ref={register} handles and tracks changes and prevents the need to track value and onChanges manually
-
+  //JSX-
   return (
     <>
       <Grommet theme={grommet}>
-        <Box height="medium" width="medium" responsive="true">
-          <Image fit="cover" src={tempSigninImage} />
-        </Box>
-        <Card pad="large" margin="large" responsive="true" align="center">
-          <Box>
-            <Heading>Sign In</Heading>
+        <Grid
+          rows={["xsmall", "large"]}
+          columns={["small", "large"]}
+          gap="small"
+          areas={[
+            { name: "image", start: [0, 1], end: [0, 1] },
+            { name: "signIn", start: [1, 1], end: [1, 1] },
+          ]}
+        >
+          <Card
+            gridArea="image"
+            margin="xxsmall"
+            width="large"
+            responsive="true"
+            // align="center"
+          >
+            <Box height="large" width="medium" responsive="true">
+              <Image fit="cover" src={tempSigninImage} />
+            </Box>
+          </Card>
+          <Card
+            gridArea="signIn"
+            pad="large"
+            margin="large"
+            responsive="true"
+            align="center"
+          >
+            <Box>
+              <Heading>Sign In</Heading>
 
-            <Form align="center" onSubmit={handleSubmit(onSubmit)}>
-              {/* If we want to have email above the field, place (label="Email") into FormField below */}
-              <FormField name="email">
-                <TextInput
-                  ref={register({
-                    required: "Email is required",
-                    minLength: { value: 6, message: "Email is too Short" },
-                  })}
+              <Form
+                align="center"
+                onSubmit={({ value }) => console.log("Submit", value)}
+              >
+                {/* If we want to have email above the field, place (label="Email") into FormField below */}
+
+                <FormField
+                  required={true}
+                  onChange={change}
+                  value={form.email}
                   type="text"
                   placeholder="Email"
                   name="email"
+                  errors="Password is required"
                 />
-              </FormField>
-              {errors.email && <p>{errors.email.message}</p>}
-              <br />
-              <br />
-              {/* If we want to have email above the field, place (label="Password") into FormField below */}
-              <FormField name="password">
-                <TextInput
-                  ref={register({
-                    required: "Password is required",
-                    minLength: { value: 12, message: "Password is too Short" },
-                  })}
+
+                <br />
+                <br />
+                {/* If we want to have email above the field, place (label="Password") into FormField below */}
+
+                <FormField
+                  required={true}
+                  onChange={change}
+                  value={form.password}
                   type="password"
                   placeholder="Password"
                   name="password"
                 />
-              </FormField>
-              {errors.password && <p>{errors.password.message}</p>}
-              {/* Button Disabled is not needed as react-form-hook doesn't allow anything to be sent without having the correct amount of info attached.  */}
-              <br />
-              <Button
-                focusIndicator="false"
-                type="reset"
-                label="Submit"
-                primary
-              />
-              <br />
-              {/* This needs to be Linked via Link once Sign up exists */}
-              <br />
-              <a href="#">Don't have an account? Sign up</a>
-            </Form>
-          </Box>
-        </Card>
+
+                {/* {errors.password && <p>{errors.password.message}</p>} */}
+
+                <br />
+                <Button
+                  focusIndicator="false"
+                  type="submit"
+                  label="Submit"
+                  primary={true}
+                  onSubmit={onSubmit}
+                />
+                <br />
+                {/* This needs to be Linked via Link once Sign up is added to the repo */}
+                <br />
+                <a href="#">Don't have an account? Sign up</a>
+              </Form>
+            </Box>
+          </Card>
+        </Grid>
       </Grommet>
     </>
   );
 };
 export default Signup;
 
-//The form validation no longer works. React-Hook-Form.
+//The form validation no longer works. React-Hook-Form and Grommet currently don't work together.
 //Example
 // () => {
 //   const [value, setValue] = React.useState({});
@@ -121,3 +159,8 @@ export default Signup;
 //   );
 // }
 //Image next to it.
+
+//Use Grommet form validation-- Figure it out
+
+//Enable button
+//Remove from front page

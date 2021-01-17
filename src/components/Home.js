@@ -20,7 +20,6 @@ const Home = () => {
         <Teaser>Get Excited 😲</Teaser>
         <LoginBtn></LoginBtn>
         <LogoutBtn></LogoutBtn>
-        <Signin />
       </header>
     </div>
   );
