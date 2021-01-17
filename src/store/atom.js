@@ -15,3 +15,9 @@ export const userInfo = atom({
   key: "user",
   default: [],
 });
+
+// Main Search Box Query
+export const mainSearchQuery = atom({
+  key: "mainSearchQuery",
+  default: '',
+});

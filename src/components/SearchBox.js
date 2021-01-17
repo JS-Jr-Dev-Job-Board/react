@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Box, Form, FormField, TextInput, Grommet } from "grommet";
 import { grommet } from "grommet/themes";
 import { deepMerge } from "grommet/utils";
+import { useRecoilState } from 'recoil';
+import { mainSearchQuery } from "../store/atom";
 
 const allJobs = [
   {
@@ -50,11 +52,9 @@ const customTheme = deepMerge(grommet, {
 });
 
 const SearchBox = (props) => {
-  const [searchInput, setSearchInput] = useState("");
-  const [searchResults, setSearchResults] = useState([]);
+  const [searchQuery, setSearchQuery] = useRecoilState(mainSearchQuery)
+  const [searchInput, setSearchInput] = useState(searchQuery);
   const searchInfo = props.name ? props.name : "searchBox";
-
-  console.log(">>>>>>>>>>>>>>>>>>", searchResults);
 
   const onChange = (e) => {
     setSearchInput(e.target.value);
@@ -62,23 +62,12 @@ const SearchBox = (props) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-
-    setSearchResults([]);
-
-    const searchMatches = [];
-    allJobs.forEach((job) => {
-      for (let item in job) {
-        if (job[item].toLowerCase().includes(searchInput.toLowerCase())) {
-          searchMatches.push(job);
-        }
-      }
-    });
-    setSearchResults(searchMatches);
-  };
+    setSearchQuery(searchInput);
+    };
 
   return (
     <Grommet themeMode='dark' theme={customTheme}>
-      <Box width="50%" alignSelf='center'  animation="jiggle">
+      <Box width="50%" alignSelf='center'  >
         <Form onSubmit={onSubmit}>
           <FormField label="Search" htmlFor={searchInfo}>
             <TextInput
@@ -92,6 +81,7 @@ const SearchBox = (props) => {
               value={searchInput}
               onChange={onChange}
             />
+            {searchQuery && <h2>Your search is: {searchQuery}</h2>}
           </FormField>
         </Form>
       </Box>
