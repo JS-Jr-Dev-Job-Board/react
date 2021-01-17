@@ -3,7 +3,7 @@ import styled from "styled-components";
 //import components
 import LoginBtn from "./LoginBtn";
 import LogoutBtn from "./LogoutBtn";
-import SearchBox from "./SearchBox";
+import Signin from "./Signin";
 
 const ComingSoon = styled.h1`
   color: ${(pr) => pr.theme.primaryColor};
