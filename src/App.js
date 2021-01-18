@@ -14,12 +14,14 @@ function App() {
   return (
 
     <Grommet theme={grommet} full responsive={true}>
+      <React.Suspense fallback={<div>Loading...</div>}>
     <div className="App">
       <header className="App-header">
         <NavBar />
        
       </header>
     </div>
+    </React.Suspense>
     </Grommet >
   );
 }
