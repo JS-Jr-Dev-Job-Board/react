@@ -39,6 +39,9 @@ function JobCard({ jobCard }) {
                           <Heading>{jobs.companyName}</Heading>
                           <div>
                             <div>
+                              <h3>Position: {jobs.position}</h3>
+                            </div>
+                            <div>
                               <h3>Salary: {jobs.salary}</h3>
                             </div>
                             <div>
