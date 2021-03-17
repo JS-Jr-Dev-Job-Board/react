@@ -3,7 +3,7 @@ import styled from "styled-components";
 //import components
 import LoginBtn from "./LoginBtn";
 import LogoutBtn from "./LogoutBtn";
-import Signin from "./Signin";
+import Signin from "./auth/Signin";
 import SearchBox from './SearchBox';
 
 const ComingSoon = styled.h1`

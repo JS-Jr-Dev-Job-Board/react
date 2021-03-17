@@ -4,12 +4,12 @@ import { useRecoilState } from "recoil";
 import { testState } from "./store/atom";
 //import components here:
 import NavBar from "./components/Navbar/Navbar";
-
+import Signin from './components/auth/Signin'
 import {Grommet} from 'grommet'
 import { grommet, dark } from "grommet/themes";
 
 
-function App() {
+const App = () => {
   const [test, setTest] = useRecoilState(testState);
   return (
 
@@ -18,7 +18,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <NavBar />
-       
+       <Signin />
       </header>
     </div>
     </React.Suspense>

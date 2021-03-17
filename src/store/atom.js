@@ -21,3 +21,9 @@ export const mainSearchQuery = atom({
   key: "mainSearchQuery",
   default: '',
 });
+
+export const isAuthenticated = atom({
+    key: 'isAuthenticated',
+    default: 'false'
+})
+

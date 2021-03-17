@@ -16,7 +16,7 @@ import {
 import { grommet } from "grommet/themes";
 
 //Image Imports
-import tempSigninImage from "../assets/tempSigninImage.jpg";
+import tempSigninImage from "../../assets/tempSigninImage.jpg";
 
 //STYLE
 // const SImage = styled(Image)`
