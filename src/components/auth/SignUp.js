@@ -1,7 +1,4 @@
-import axios from 'axios'
 import React, { useState } from 'react'
-//import { useForm } from "react-hook-form"; //
-//Style Imports
 import {
   Box,
   Button,
@@ -18,39 +15,33 @@ import { grommet } from 'grommet/themes'
 //Image Imports
 import tempSigninImage from '../../assets/tempSigninImage.jpg'
 
-//STYLE
-// const SImage = styled(Image)`
-//   width: 100%;
-// `;
+/****** TO DO: ******
+  - Add verification that passwords match
+    - logic
+    - implement error message if not matching 
+    - disable submit if not matching? or let them hit submit, but then error with message?
+  - Hook it up, fix links
+  - Verify grommet done correctly?
+******/
 
-const SignIn = () => {
-  //STATE
-  const [form, setForm] = useState({
-    email: '',
-    password: ''
-  })
+const initialValues = {
+  email: '',
+  password: '',
+  passwordVerify: ''
+}
 
-  //CHANGE
-  const change = (e) => {
-    const { value, name } = e.target
-    const valueToUse = value
-    setForm({ ...form, [name]: valueToUse })
+const SignUp = () => {
+  const [form, setForm] = useState(initialValues)
+
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value
+    })
   }
 
-  //ONSUBMIT-- Recoil, plus react-hook-form
-  const onSubmit = (data) => {
-    axios
-      .post('#')
-      .then((res) => {
-        debugger
-      })
-      .catch((res) => {
-        debugger
-      })
-    console.log(data)
-  }
+  const onSubmit = () => {}
 
-  //JSX-
   return (
     <Grommet theme={grommet}>
       <Grid
@@ -59,7 +50,7 @@ const SignIn = () => {
         gap='small'
         areas={[
           { name: 'image', start: [0, 1], end: [0, 1] },
-          { name: 'signIn', start: [1, 1], end: [1, 1] }
+          { name: 'signUp', start: [1, 1], end: [1, 1] }
         ]}
       >
         <Card
@@ -74,46 +65,49 @@ const SignIn = () => {
           </Box>
         </Card>
         <Card
-          gridArea='signIn'
+          gridArea='signUp'
           pad='large'
           margin='large'
           responsive='true'
           align='center'
         >
           <Box>
-            <Heading>Sign In</Heading>
+            <Heading>Sign Up</Heading>
 
             <Form
               align='center'
               onSubmit={({ value }) => console.log('Submit', value)}
             >
               {/* If we want to have email above the field, place (label="Email") into FormField below */}
-
               <FormField
                 required={true}
-                onChange={change}
+                onChange={handleChange}
                 value={form.email}
                 type='email'
                 placeholder='Email'
                 name='email'
                 errors='Password is required'
               />
-
-              <br />
               <br />
               {/* If we want to have email above the field, place (label="Password") into FormField below */}
-
               <FormField
                 required={true}
-                onChange={change}
+                onChange={handleChange}
                 value={form.password}
                 type='password'
                 placeholder='Password'
                 name='password'
               />
-
+              <br />
+              <FormField
+                required={true}
+                onChange={handleChange}
+                value={form.passwordVerify}
+                type='password'
+                placeholder='Re-type Password'
+                name='passwordVerify'
+              />
               {/* {errors.password && <p>{errors.password.message}</p>} */}
-
               <br />
               <Button
                 focusIndicator='false'
@@ -133,32 +127,5 @@ const SignIn = () => {
     </Grommet>
   )
 }
-export default SignIn
 
-//The form validation no longer works. React-Hook-Form and Grommet currently don't work together.
-//Example
-// () => {
-//   const [value, setValue] = React.useState({});
-//   return (
-//     <Form
-//       value={value}
-//       onChange={nextValue => setValue(nextValue)}
-//       onReset={() => setValue({})}
-//       onSubmit={({ value }) => {}}
-//     >
-//       <FormField name="name" htmlFor="text-input-id" label="Name">
-//         <TextInput id="text-input-id" name="name" errors="Passord is required"/>
-//       </FormField>
-//       <Box direction="row" gap="medium">
-//         <Button type="submit" primary label="Submit" />
-//         <Button type="reset" label="Reset" />
-//       </Box>
-//     </Form>
-//   );
-// }
-//Image next to it.
-
-//Use Grommet form validation-- Figure it out
-
-//Enable button
-//Remove from front page
+export default SignUp
