@@ -1,29 +1,31 @@
-// import "./App.css";
-import React from "react";
-import { useRecoilState } from "recoil";
-import { testState } from "./store/atom";
+// import "./css/App.css";
+import React from 'react'
+import { useRecoilState } from 'recoil'
+import { testState } from './store/atom'
 //import components here:
-import NavBar from "./components/Navbar/Navbar";
+import NavBar from './components/Navbar/Navbar'
+import SignIn from './components/auth/SignIn'
+import SignUp from './components/auth/SignUp'
+import { Grommet } from 'grommet'
+import { grommet, dark } from 'grommet/themes'
 
-import {Grommet} from 'grommet'
-import { grommet, dark } from "grommet/themes";
-
-
-function App() {
-  const [test, setTest] = useRecoilState(testState);
+const App = () => {
+  const [test, setTest] = useRecoilState(testState)
   return (
-
     <Grommet theme={grommet} full responsive={true}>
       <React.Suspense fallback={<div>Loading...</div>}>
-    <div className="App">
-      <header className="App-header">
-        <NavBar />
-       
-      </header>
-    </div>
-    </React.Suspense>
-    </Grommet >
-  );
+        <div className='App'>
+          <header className='App-header'>
+            <NavBar />
+          </header>
+          <main>
+            <SignIn />
+            <SignUp />
+          </main>
+        </div>
+      </React.Suspense>
+    </Grommet>
+  )
 }
 
-export default App;
+export default App
