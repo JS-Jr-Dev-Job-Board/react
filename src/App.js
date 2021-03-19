@@ -1,4 +1,4 @@
-// import "./App.css";
+// import "./css/App.css";
 import React from 'react'
 import { useRecoilState } from 'recoil'
 import { testState } from './store/atom'
@@ -17,9 +17,11 @@ const App = () => {
         <div className='App'>
           <header className='App-header'>
             <NavBar />
+          </header>
+          <main>
             <SignIn />
             <SignUp />
-          </header>
+          </main>
         </div>
       </React.Suspense>
     </Grommet>
