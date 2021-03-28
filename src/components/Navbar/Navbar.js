@@ -6,6 +6,7 @@ import { MenuItems } from './MenuItems'
 import AboutUs from '../AboutUs'
 import Jobs from '../Jobs/Jobs'
 import Portfolio from '../Portfolio'
+import DevDashboard from '../devdash/DevDashboard'
 import Home from '../Home'
 
 const Navbar = () => {
@@ -49,6 +50,9 @@ const Navbar = () => {
           </Route>
           <Route path='/portfolio'>
             <Portfolio />
+          </Route>
+          <Route path='/dev-dash'>
+            <DevDashboard />  
           </Route>
           <Route path='/'>
             <Home />

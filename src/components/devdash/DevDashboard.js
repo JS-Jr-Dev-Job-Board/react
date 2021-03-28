@@ -1,3 +1,16 @@
+import React from 'react'
+
+const DevDashboard = () => {
+    return (
+        <div>
+            this is the developer's dashboard
+        </div>
+    )
+}
+
+export default DevDashboard
+
+
 // TASKS // PLAN
 //
 // see wireframes: https://whimsical.com/portfolio-app-VgmmDLN2WBqj4eD4YFyHoc
