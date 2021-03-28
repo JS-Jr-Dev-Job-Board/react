@@ -1,9 +1,10 @@
 import React from 'react'
+import DevDashBar from './DevDashBar'
 
 const DevDashboard = () => {
     return (
         <div>
-            this is the developer's dashboard
+            <DevDashBar />
         </div>
     )
 }
