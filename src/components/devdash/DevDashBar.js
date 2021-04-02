@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import { Box, Tab, Tabs, Text, Image } from 'grommet';
 import { DevTabItems } from './DevTabItems';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import '../../css/DevDashBar.css'
 import Jobs from '../Jobs/Jobs';
 import Applications from './Applications/Applications'
@@ -50,30 +49,67 @@ const DevDashBar = () => {
                     <Jobs />
                 </Route>
                 <Route path='/dev-dash/starred'>
-                    ###starred component###
-                    -things you should be able to do:
-                    --- view jobs from "search" that youve saved
-                    --- countdown time from moment you've saved the job, will clear afte XX hours
+                    <div>
+                      <ul>
+                        ###starred component###
+                      </ul>
+                      <ul>
+                        -things you should be able to do:
+                      </ul>
+                      <ul>
+                        --- view jobs from "search" that youve saved
+                      </ul>
+                      <ul>  
+                        --- countdown time from moment you've saved the job, will clear afte XX hours
+                      </ul>
+                    </div>
                 </Route>
                 <Route path='/dev-dash/active'>
+                  <ul>
                     ****ACTIVE APPLICATIONS COMPONENT****
+                  </ul>
+                  <ul>
                     -things you should be able to do:
+                  </ul>
+                  <ul>
                     --- view card per application:
+                  </ul>
+                  <ul>
                     ----- timer to next stage (interview in..., reply to email within....,)
+                  </ul>
+                  <ul>
                     ----- record notes on interview
+                  </ul>
+                  <ul>
                     ----- view/search for resources on specific libraries, terms, etc.
+                  </ul>
 
                 </Route>
                 <Route path='/dev-dash/applied'>
+                  <ul>
                     /\/\/\/applied applications archive\/\/\/\
+                  </ul>
+                  <ul>
                     -things you should be able to do:
+                  </ul>
+                  <ul>
                     --- view old resumes / applications
+                  </ul>
+                  
                 </Route>
                 <Route path='/dev-dash/stats'>
+                  <ul>
                     !!STATS COMPONENT!!
+                  </ul>
+                  <ul>
                     -things you should be able to do:
+                  </ul>
+                  <ul>
                     --- view stats (nos. appls submitted, avg time to first contact, etc)
+                  </ul>
+                  <ul>
                     --- edit your profile info, resume, and search prefs
+                  </ul>
                 </Route>
             </Switch>
         </Router>
