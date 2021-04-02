@@ -19,20 +19,17 @@ export default DevDashboard
 //
 // 1. "My Dashboard" tabs
 // -- 5 tabs
-// - FE: tabs display 
-// page/ section on click 
-// consisting mainly of lists
-// ---> each tab has notification
-// chip with # of items within 
-// each tab's list
-// - BE: series of routes/models 
-// displaying different stored user data
+    // - FE: tabs display page/section (series of lists / cards) on click 
+    // ------> each tab has notification chip with # of items within each tab's list
+    // - BE: series of routes/models displaying different stored user data
+    // ----------- see note in DevTabItems.js
 
 // -- search:
     // ---- list of jobs 
     // based on prefs
     // - FE: list of potential jobs
     // - BE: connection to scraper
+    // **NOTE: jobs component placeholder is already built in repo**
 
 // -- starred:
     // ---- list of jobs 
