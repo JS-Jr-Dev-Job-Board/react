@@ -6,7 +6,7 @@ justify-content: flex-end;
 align-items: flex-end;
 flex-direction: column;
 padding: 15px 30px;
-border: 1px solid black;
+/* border: 1px solid black; */
   /* box-sizing: border-box; */
   input{
     outline: none;

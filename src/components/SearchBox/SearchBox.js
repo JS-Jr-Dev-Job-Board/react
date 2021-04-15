@@ -41,6 +41,7 @@ const SearchBox = (props) => {
       </label>
       {searchQuery && <h2>Your search is: {searchQuery}</h2>}
     </StyledSearchBox>
+    
   )
 }
 
