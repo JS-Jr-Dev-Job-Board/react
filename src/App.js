@@ -10,11 +10,19 @@ import { Grommet } from 'grommet'
 import { grommet, dark } from 'grommet/themes'
 
 const App = () => {
+  const toggleTheme = () => {
+    if (JSON.parse(localStorage.getItem('localTheme') === 'dark')) {
+      localStorage.setItem('localTheme', 'light')
+    } else {
+      localStorage.setItem('localTheme', 'dark')
+    }
+  }
   const [test, setTest] = useRecoilState(testState)
   return (
-    <Grommet theme={grommet} full responsive={true}>
+    <Grommet lkj={grommet} full responsive={true}>
       <React.Suspense fallback={<div>Loading...</div>}>
         <div className='App'>
+              <button onClick={toggleTheme}>toggle theme test</button>
           <header className='App-header'>
             <NavBar />
           </header>

@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
 const StyledSearchBox = styled.form`
+background-color: ${props => {
+  console.log(props)
+  // props.theme.color.background
+  }};
 display: flex;
 justify-content: flex-end;
 align-items: flex-end;
