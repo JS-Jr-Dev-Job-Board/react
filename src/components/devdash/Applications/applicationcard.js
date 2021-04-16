@@ -1,80 +1,66 @@
-import React from "react";
-import { Box, Button, Card, Grommet, Form, Heading } from "grommet";
-import { grommet } from "grommet/themes";
-import { useRecoilValue, selector } from "recoil";
-//import GrommetTheme from "../theme/grommetTheme"
+import React from 'react'
+import { useRecoilValue, selector } from 'recoil'
 
-const url = `https://js-jr-dev-board.herokuapp.com/api/v1/jobs`;
+const url = `https://js-jr-dev-board.herokuapp.com/api/v1/jobs`
 
 //fetch details here
 const fetchJobDetails = selector({
-  key: "jobDetailsSelector",
+  key: 'jobDetailsSelector',
   get: async ({ get }) => {
     try {
-      const response = await fetch(url);
-      const data = await response.json();
-      return data;
+      const response = await fetch(url)
+      const data = await response.json()
+      return data
     } catch (error) {
-      throw error;
+      throw error
     }
-  },
-});
+  }
+})
 
-console.log("fetch job details", fetchJobDetails)
+console.log('fetch job details', fetchJobDetails)
 
 function ApplicationCard({ jobCard }) {
-  const jobCards = useRecoilValue(fetchJobDetails);
-  console.log("HOOOOOO application data data", jobCards);
+  const jobCards = useRecoilValue(fetchJobDetails)
+  console.log('HOOOOOO application data data', jobCards)
   return (
-    <Grommet theme={grommet}>
-      <Box>
-        <div className="card">
-          <div>
-            {Object.keys(jobCards).map((key) => {
-              return (
-                <div key={key}>
-                  {jobCards[key].map((jobs) => {
-                    return (
-                      <Form align="center">
-                        <Card key={jobs.id} margin="xlarge" pad="large">
-                          {" "}
-                          <Heading>{jobs.companyName}</Heading>
+    <div>
+      <div className='card'>
+        <div>
+          {Object.keys(jobCards).map((key) => {
+            return (
+              <div key={key}>
+                {jobCards[key].map((jobs) => {
+                  return (
+                    <form>
+                      <div>
+                        <h2>{jobs.companyName}</h2>
+                        <div>
                           <div>
-                            <div>
-                              <h3>Position: {jobs.position}</h3>
-                            </div>
-                            <div>
-                              <h3>Salary: {jobs.salary}</h3>
-                            </div>
-                            <div>
-                              <h3> Location: {jobs.location}</h3>
-                            </div>
-                            <h3>Job Description:</h3>
-                            <p>{jobs.description}</p>
+                            <h3>Position: {jobs.position}</h3>
                           </div>
-                          <div className="JobCardApply">
-                            
-                            <Button
-                            //functioning link to applyUrl
-                              href={jobs.applyUrl}
-                              focusIndicator="true"
-                              type="reset"
-                              label="Apply"
-                              primary
-                            />
+                          <div>
+                            <h3>Salary: {jobs.salary}</h3>
                           </div>
-                        </Card>
-                      </Form>
-                    );
-                  })}
-                </div>
-              );
-            })}
-          </div>
+                          <div>
+                            <h3> Location: {jobs.location}</h3>
+                          </div>
+                          <h3>Job Description:</h3>
+                          <p>{jobs.description}</p>
+                        </div>
+                        <div className='JobCardApply'>
+                          <button>replacement from grommet button</button>
+                        </div>
+                      </div>
+                    </form>
+                  )
+                })}
+              </div>
+            )
+          })}
         </div>
-      </Box>
-    </Grommet>
-  );
+      </div>
+    </div>
+  )
 }
 
-export default ApplicationCard;
+export default ApplicationCard

@@ -1,16 +1,18 @@
 import React from 'react'
 import JobCard from './jobcard'
-import { Grommet, Box, Grid, Heading } from 'grommet'
-import { grommet } from 'grommet/themes'
+// import { Grommet, Box, Grid, Heading } from 'grommet'
+// import { grommet } from 'grommet/themes'
 //import GrommetTheme from "../theme/grommetTheme"
 
 const Jobs = ({ jobCard }) => {
   return (
-    <Grommet theme={grommet}>
-      <Heading align='center' justify='center' textAlign='center'>
+    <div>
+      {/* // <Grommet theme={grommet}> */}
+      {/* <Heading align='center' justify='center' textAlign='center'>
         Job Board
-      </Heading>
-      <Grid
+      </Heading> */}
+      <h2>Job board heading</h2>
+      {/* <Grid
         gap='medium'
         pad={{ horizontal: 'xxlarge' }}
         responsive='true'
@@ -19,7 +21,7 @@ const Jobs = ({ jobCard }) => {
         flex='true'
         // rows="flex"
         // rows="small">
-      >
+        >
         <Box
           direction='column'
           justify='around'
@@ -27,11 +29,12 @@ const Jobs = ({ jobCard }) => {
           pad={{ horizontal: 'xxlarge' }}
           responsive='true'
           animation='zoomIn'
-        >
-          <JobCard />
-        </Box>
-      </Grid>
-    </Grommet>
+          > */}
+      <JobCard />
+      {/* </Box> */}
+      {/* </Grid> */}
+      {/* // </Grommet> */}
+    </div>
   )
 }
 

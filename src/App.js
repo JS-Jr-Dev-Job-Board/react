@@ -1,28 +1,28 @@
 // import "./css/App.css";
-import React from 'react'
+import React, { useState } from 'react'
 import { useRecoilState } from 'recoil'
 import { testState } from './store/atom'
+import { ThemeProvider } from 'styled-components'
 //import components here:
 import NavBar from './components/Navbar/Navbar'
 import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp'
-import { Grommet } from 'grommet'
-import { grommet, dark } from 'grommet/themes'
+import darkTheme from './theme/darkTheme'
+import lightTheme from './theme/lightTheme'
 
 const App = () => {
+  const [isDarkTheme, setIsDarkTheme] = useState(false)
+
   const toggleTheme = () => {
-    if (JSON.parse(localStorage.getItem('localTheme') === 'dark')) {
-      localStorage.setItem('localTheme', 'light')
-    } else {
-      localStorage.setItem('localTheme', 'dark')
-    }
+    setIsDarkTheme(!isDarkTheme)
   }
+
   const [test, setTest] = useRecoilState(testState)
   return (
-    <Grommet lkj={grommet} full responsive={true}>
+    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <React.Suspense fallback={<div>Loading...</div>}>
         <div className='App'>
-              <button onClick={toggleTheme}>toggle theme test</button>
+          <button onClick={toggleTheme}>toggle theme test</button>
           <header className='App-header'>
             <NavBar />
           </header>
@@ -32,7 +32,7 @@ const App = () => {
           </main>
         </div>
       </React.Suspense>
-    </Grommet>
+    </ThemeProvider>
   )
 }
 

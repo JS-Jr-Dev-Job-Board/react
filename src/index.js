@@ -4,8 +4,6 @@ import './css/index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter as Router } from 'react-router-dom'
-import { ThemeProvider } from 'styled-components'
-import theme from './theme/index'
 
 import { Auth0Provider } from '@auth0/auth0-react'
 import {
@@ -18,7 +16,6 @@ import {
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
       <RecoilRoot>
         <Auth0Provider
           domain='YOUR_DOMAIN'
@@ -30,7 +27,6 @@ ReactDOM.render(
           </Router>
         </Auth0Provider>
       </RecoilRoot>
-    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 )
