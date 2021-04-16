@@ -1,11 +1,13 @@
 // Starting Theme
 
 const theme = {
-  primaryColor: "#FF6347",
-  secondaryColor: "#14213D",
-  tertiaryColor: "#282c34",
-  black: "#000000",
-  white: "oldlace",
+  breakpoint: {
+    1: '1440px',
+    2: '1024px',
+    3: '768px',
+    4: '550px',
+    5: '300px',
+  }
 };
 
 export default theme;

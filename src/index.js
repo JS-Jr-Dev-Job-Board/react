@@ -5,7 +5,9 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
-import theme from './theme'
+import lightTheme from './theme/lightTheme'
+import darkTheme from './theme/darkTheme'
+
 import { Auth0Provider } from '@auth0/auth0-react'
 import {
   RecoilRoot,
@@ -14,6 +16,10 @@ import {
   useRecoilState,
   useRecoilValue
 } from 'recoil'
+
+const localTheme = JSON.parse(localStorage.getItem('localTheme'))
+const theme = localTheme === 'dark' ? darkTheme : lightTheme
+console.log(theme)
 
 ReactDOM.render(
   <React.StrictMode>
