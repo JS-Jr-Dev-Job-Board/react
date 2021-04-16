@@ -4,7 +4,7 @@ import { RecoilRoot } from 'recoil'
 import userEvent from '@testing-library/user-event'
 
 //components
-import SearchBox from './SearchBox'
+import SearchBox from '../SearchBox/SearchBox'
 
 test('[SearchBox] sanity check, searchbox component renders without errors', async () => {
   render(
