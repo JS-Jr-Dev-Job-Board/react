@@ -2,11 +2,14 @@ import theme from './index'
 
 const lightTheme = {
   ...theme,
-  color:{
+  // None of these are set colors
+  color: {
     background: 'white',
-    primaryColor: '#FF6347',
-    secondaryColor: 'brown',
-    tertiaryColor: 'red'
+    secondaryBackground: '#eee',
+    primary: '#FF6347',
+    secondary: 'brown',
+    tertiary: 'red',
+    accent: 'green'
   }
 }
 

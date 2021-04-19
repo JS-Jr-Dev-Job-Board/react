@@ -1,5 +1,5 @@
 // import "./css/App.css";
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useRecoilState } from 'recoil'
 import { testState } from './store/atom'
 import { ThemeProvider } from 'styled-components'
@@ -13,8 +13,16 @@ import lightTheme from './theme/lightTheme'
 const App = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(false)
 
+  useEffect(() => {
+    const localTheme = localStorage.getItem('localTheme')
+    localTheme === 'dark' ? setIsDarkTheme(true) : setIsDarkTheme(false)
+  }, [])
+
   const toggleTheme = () => {
     setIsDarkTheme(!isDarkTheme)
+    const localThemeVal =
+      localStorage.getItem('localTheme') === 'dark' ? 'light' : 'dark'
+    localStorage.setItem('localTheme', localThemeVal)
   }
 
   const [test, setTest] = useRecoilState(testState)
