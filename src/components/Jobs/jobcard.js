@@ -1,8 +1,8 @@
 import React from "react";
-import { Box, Button, Card, Grommet, Form, Heading } from "grommet";
-import { grommet } from "grommet/themes";
 import { useRecoilValue, selector } from "recoil";
 //import GrommetTheme from "../theme/grommetTheme"
+// import { Box, Button, Card, Grommet, Form, Heading } from "grommet";
+// import { grommet } from "grommet/themes";
 
 const url = `https://js-jr-dev-board.herokuapp.com/api/v1/jobs`;
 
@@ -24,8 +24,8 @@ function JobCard({ jobCard }) {
   const jobCards = useRecoilValue(fetchJobDetails);
   console.log("fetching data", jobCards);
   return (
-    <Grommet theme={grommet}>
-      <Box>
+    // <Grommet theme={grommet}>
+      // <Box>
         <div className="card">
           <div>
             {Object.keys(jobCards).map((key) => {
@@ -33,10 +33,13 @@ function JobCard({ jobCard }) {
                 <div key={key}>
                   {jobCards[key].map((jobs) => {
                     return (
-                      <Form align="center">
-                        <Card key={jobs.id} margin="xlarge" pad="large">
+                      <form>
+
+                      {/* <Form align="center"> */}
+                        {/* <Card key={jobs.id} margin="xlarge" pad="large"> */}
                           {" "}
-                          <Heading>{jobs.companyName}</Heading>
+                          {/* <Heading>{jobs.companyName}</Heading> */}
+                          <h2>{jobs.companyName}</h2>
                           <div>
                             <div>
                               <h3>Position: {jobs.position}</h3>
@@ -51,18 +54,19 @@ function JobCard({ jobCard }) {
                             <p>{jobs.description}</p>
                           </div>
                           <div className="JobCardApply">
-                            
-                            <Button
+                            <button>replacement for grommet</button>
+                            {/* <Button
                             //functioning link to applyUrl
-                              href={jobs.applyUrl}
-                              focusIndicator="true"
-                              type="reset"
-                              label="Apply"
-                              primary
-                            />
+                            href={jobs.applyUrl}
+                            focusIndicator="true"
+                            type="reset"
+                            label="Apply"
+                            primary
+                            /> */}
                           </div>
-                        </Card>
-                      </Form>
+                        {/* </Card> */}
+                      {/* </Form> */}
+                  </form>
                     );
                   })}
                 </div>
@@ -70,8 +74,8 @@ function JobCard({ jobCard }) {
             })}
           </div>
         </div>
-      </Box>
-    </Grommet>
+      // </Box>
+    // </Grommet>
   );
 }
 
