@@ -1,13 +1,13 @@
 import { render, screen } from '@testing-library/react'
 import App from '../../App'
 import { RecoilRoot } from 'recoil'
-
+import { BrowserRouter } from 'react-router-dom'
 test('renders learn react link', () => {
   render(
-    <RecoilRoot>
-      <App />
-    </RecoilRoot>
+    <BrowserRouter>
+      <RecoilRoot>
+        <App />
+      </RecoilRoot>
+    </BrowserRouter>
   )
-  // const linkElement = screen.getByText(/learn react/i)
-  // expect(linkElement).toBeInTheDocument()
 })

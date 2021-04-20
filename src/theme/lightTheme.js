@@ -11,7 +11,7 @@ const lightTheme = {
     secondary: 'brown',
     tertiary: 'red',
     accent: 'green',
-    navBackground: 'linear-gradient( 90deg, #1E4903 0%, #348005 100%)',
+    navBackground: 'linear-gradient( 90deg, #348005 60%, #1E4903 100%)',
     white: '#fff'
   }
 }

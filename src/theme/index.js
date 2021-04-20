@@ -21,7 +21,7 @@ const theme = {
   },
   size: {
     smallest: '1.6rem',
-    small: '2rem',
+    small: '2.4rem',
     medium: '4rem',
     large: '8rem',
     largest: '16rem'

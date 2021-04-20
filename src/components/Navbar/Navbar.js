@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import { Button } from './Button/Button'
 import { MenuItems } from './MenuItems'
 import StyledNavbar from './StyledNavbar'
@@ -14,11 +14,11 @@ const Navbar = () => {
 
   return (
     <StyledNavbar>
-      <NavLink to='/'>
+      <Link to='/'>
         <h1 className='NavbarLogo'>
           Jr Dev Jobs<i className='fab fa-react'></i>
         </h1>
-      </NavLink>
+      </Link>
       <div className='menu-icon' onClick={onSubmit}>
         <i className={on ? 'fas fa-times' : 'fas fa-bars'}></i>
       </div>
