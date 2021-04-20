@@ -3,7 +3,7 @@ import styled from 'styled-components'
 //import components
 import LoginBtn from './auth/LoginBtn'
 import LogoutBtn from './auth/LogoutBtn'
-import SignIn from './auth/SignIn'
+// import SignIn from './auth/SignIn'
 import SearchBox from './SearchBox/SearchBox'
 import Testimonials from './Testimonials'
 
