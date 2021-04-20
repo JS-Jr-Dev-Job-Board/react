@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const StyledNavbar = styled.nav`
-  background: ${props => props.theme.color.navBackground};
+  background: ${(props) => props.theme.color.navBackground};
   height: 80px;
   display: flex;
   justify-content: center;
@@ -42,13 +42,13 @@ const StyledNavbar = styled.nav`
   }
 
   .nav-links:hover {
-    background-color: ${props => props.theme.color.linkHover};
+    background-color: ${(props) => props.theme.color.linkHover};
     border-radius: 4px;
     transition: all 0.2s ease-out;
   }
 
   .fa-bars {
-    color: #fff;
+    color: ${(props) => props.theme.color.white};
   }
 
   .nav-links-mobile {

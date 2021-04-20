@@ -12,7 +12,8 @@ const darkTheme = {
     tertiary: 'blue',
     accent: 'blue',
     navBackground:
-      'linear-gradient( 90deg, rgb(110, 94, 254) 0%, rgba(73, 63, 252, 1) 100%)'
+      'linear-gradient( 90deg, rgb(110, 94, 254) 0%, rgba(73, 63, 252, 1) 100%)',
+    white: '#fff',
   }
 }
 
