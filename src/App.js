@@ -7,6 +7,8 @@ import { ThemeProvider } from 'styled-components'
 import NavBar from './components/Navbar/Navbar'
 import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp'
+import Footer from './components/Footer/Footer'
+
 import darkTheme from './theme/darkTheme'
 import lightTheme from './theme/lightTheme'
 
@@ -38,6 +40,7 @@ const App = () => {
             <SignIn />
             <SignUp />
           </main>
+          <Footer/>
         </div>
       </React.Suspense>
     </ThemeProvider>

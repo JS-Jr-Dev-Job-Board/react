@@ -2,6 +2,9 @@ import '@testing-library/jest-dom'
 import { render, screen } from '@testing-library/react'
 import { RecoilRoot } from 'recoil'
 import userEvent from '@testing-library/user-event'
+import { ThemeProvider } from 'styled-components'
+
+import theme from '../../theme/index'
 
 //components
 import SearchBox from '../SearchBox/SearchBox'
@@ -9,7 +12,9 @@ import SearchBox from '../SearchBox/SearchBox'
 test('[SearchBox] sanity check, searchbox component renders without errors', async () => {
   render(
     <RecoilRoot>
-      <SearchBox placeholder='test name' />
+      <ThemeProvider theme={theme}>
+        <SearchBox placeholder='test name' />
+      </ThemeProvider>
     </RecoilRoot>
   )
 })
@@ -17,7 +22,10 @@ test('[SearchBox] sanity check, searchbox component renders without errors', asy
 test('[SearchBox] takes custom placeholder prop', async () => {
   render(
     <RecoilRoot>
-      <SearchBox placeholder='test name' />
+      {' '}
+      <ThemeProvider theme={theme}>
+        <SearchBox placeholder='test name' />{' '}
+      </ThemeProvider>
     </RecoilRoot>
   )
 
@@ -28,7 +36,10 @@ test('[SearchBox] takes custom placeholder prop', async () => {
 test('[SearchBox] aria label exists', async () => {
   render(
     <RecoilRoot>
-      <SearchBox placeholder='test name' />
+      {' '}
+      <ThemeProvider theme={theme}>
+        <SearchBox placeholder='test name' />{' '}
+      </ThemeProvider>
     </RecoilRoot>
   )
 
@@ -41,7 +52,10 @@ test('[SearchBox] submitted searchbox text renders on {enter}', async () => {
 
   const search = render(
     <RecoilRoot>
-      <SearchBox name={testNameProp} />
+      {' '}
+      <ThemeProvider theme={theme}>
+        <SearchBox name={testNameProp} />{' '}
+      </ThemeProvider>
     </RecoilRoot>
   )
 
@@ -50,5 +64,4 @@ test('[SearchBox] submitted searchbox text renders on {enter}', async () => {
 
   const displayText = await screen.findByText(/entered search box text/i)
   expect(displayText).toBeInTheDocument()
-  
 })
