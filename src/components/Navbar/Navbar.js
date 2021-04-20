@@ -15,9 +15,11 @@ const Navbar = () => {
   return (
     <div>
       <nav className='NavbarItems'>
-        <h1 className='NavbarLogo'>
-          Jr Dev Jobs<i className='fab fa-react'></i>
-        </h1>
+        <NavLink to='/'>
+          <h1 className='NavbarLogo'>
+            Jr Dev Jobs<i className='fab fa-react'></i>
+          </h1>
+        </NavLink>
         <div className='menu-icon' onClick={onSubmit}>
           <i className={on ? 'fas fa-times' : 'fas fa-bars'}></i>
         </div>
@@ -25,9 +27,9 @@ const Navbar = () => {
           {MenuItems.map((item, index) => {
             return (
               <li key={index}>
-                <a className={item.cName} href={item.url}>
+                <NavLink className={item.cName} to={item.url}>
                   {item.title}
-                </a>
+                </NavLink>
               </li>
             )
           })}
