@@ -32,8 +32,8 @@ describe('testing Footer', () => {
     )
     const date = new Date() //get the current date
     const year = date.getFullYear() //take the year
-    const asdf = new RegExp(`${year}`) //turn the year into RegExp
-    const yearRendered = await screen.findByText(asdf) //find by regex
+    const currentYear = new RegExp(`${year}`) //turn the year into RegExp
+    const yearRendered = await screen.findByText(currentYear) //find by regex
     expect(yearRendered).toBeInTheDocument() //expect the present year to be in footer
   })
 })
