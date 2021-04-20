@@ -3,11 +3,18 @@ import React, { useState, useEffect } from 'react'
 import { useRecoilState } from 'recoil'
 import { testState } from './store/atom'
 import { ThemeProvider } from 'styled-components'
+import { Switch, Route } from 'react-router-dom'
+
 //import components here:
 import NavBar from './components/Navbar/Navbar'
 import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp'
 import Footer from './components/Footer/Footer'
+import AboutUs from './components/AboutUs'
+import Jobs from './components/Jobs/Jobs'
+import Portfolio from './components/Portfolio'
+import DevDashboard from './components/devdash/DevDashboard'
+import Home from './components/Home'
 
 import darkTheme from './theme/darkTheme'
 import lightTheme from './theme/lightTheme'
@@ -37,10 +44,27 @@ const App = () => {
             <NavBar />
           </header>
           <main>
+            <Switch>
+              <Route path='/about'>
+                <AboutUs />
+              </Route>
+              <Route path='/jobs'>
+                <Jobs />
+              </Route>
+              <Route path='/portfolio'>
+                <Portfolio />
+              </Route>
+              <Route path='/dev-dash'>
+                <DevDashboard />
+              </Route>
+              <Route exact path='/'>
+                <Home />
+              </Route>
+            </Switch>
             <SignIn />
             <SignUp />
           </main>
-          <Footer/>
+          <Footer />
         </div>
       </React.Suspense>
     </ThemeProvider>
