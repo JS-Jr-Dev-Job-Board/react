@@ -1,16 +1,16 @@
 import styled from 'styled-components'
 
 const StyledNavbar = styled.nav`
-  background: linear-gradient(
-    90deg,
-    rgb(110, 94, 254) 0%,
-    rgba(73, 63, 252, 1) 100%
-  );
+  background: ${props => props.theme.color.navBackground};
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
+
+  a {
+    text-decoration: none;
+  }
 
   .NavbarLogo {
     color: #fff;
@@ -42,7 +42,7 @@ const StyledNavbar = styled.nav`
   }
 
   .nav-links:hover {
-    background-color: #6d76f7;
+    background-color: ${props => props.theme.color.linkHover};
     border-radius: 4px;
     transition: all 0.2s ease-out;
   }
