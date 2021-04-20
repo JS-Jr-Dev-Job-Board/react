@@ -10,6 +10,10 @@ const StyledSearchBox = styled.form`
   /* border: 1px solid black; */
   /* box-sizing: border-box; */
   input {
+    ::placeholder {
+      color: ${(props) => props.theme.color.accent};
+    }
+    background-color: ${(props) => props.theme.color.secondaryBackground};
     outline: none;
     width: min(400px, 90vw);
     padding: 8px;
