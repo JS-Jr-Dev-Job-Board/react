@@ -1,7 +1,7 @@
 // import "./css/App.css";
 import React, { useState, useEffect } from 'react'
-import { useRecoilState } from 'recoil'
-import { testState } from './store/atom'
+// import { useRecoilState } from 'recoil'
+// import { testState } from './store/atom'
 import { ThemeProvider } from 'styled-components'
 import { Switch, Route } from 'react-router-dom'
 
@@ -34,7 +34,7 @@ const App = () => {
     localStorage.setItem('localTheme', localThemeVal)
   }
 
-  const [test, setTest] = useRecoilState(testState)
+  // const [test, setTest] = useRecoilState(testState)
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <React.Suspense fallback={<div>Loading...</div>}>

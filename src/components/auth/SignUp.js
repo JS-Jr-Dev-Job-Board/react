@@ -76,7 +76,7 @@ const SignUp = () => {
           <br />
           {/* This needs to be Linked via Link once Sign up is added to the repo */}
           <br />
-          <a href='#'>Don't have an account? Sign up</a>
+          <a href='/'>Don't have an account? Sign up</a>
         </form>
       </div>
     </div>
