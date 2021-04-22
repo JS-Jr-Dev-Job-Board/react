@@ -1,66 +1,106 @@
-import React, { useState } from 'react'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
-import '../../css/Navbar.css'
-import { Button } from './Button/Button'
-import { MenuItems } from './MenuItems'
-import AboutUs from '../AboutUs'
-import Jobs from '../Jobs/Jobs'
-import Portfolio from '../Portfolio'
-import DevDashboard from '../devdash/DevDashboard'
-import Home from '../Home'
+import React, { useState, useEffect } from 'react'
+
+// REACT ICONS
+import { FaTimes, FaBars } from 'react-icons/fa'
+import { IconContext } from 'react-icons/lib'
+
+// GLOBAL STYLES
+import { Button } from '../../globalStyles'
+
+// COMPONENT'S ELEMENTS
+import {
+    Nav,
+    NavbarContainer,
+    NavLogo,
+    NavIcon,
+    MobileIcon,
+    NavMenu,
+    NavItem,
+    NavLinks,
+    NavItemBtn,
+    NavBtnLink,
+    
+} from './Navbar.elements'
+
 
 const Navbar = () => {
-  const [on, setOpen] = useState(false)
 
-  const onSubmit = (e) => {
-    e.preventDefault()
-    setOpen(!on)
-  }
+const [ click, setClick ] = useState(false);
+const [ button, setButton ] = useState(true);
 
-  return (
-    <div>
-      <Router>
-        <nav className='NavbarItems'>
-          <h1 className='NavbarLogo'>
-            Jr Dev Jobs<i className='fab fa-react'></i>
-          </h1>
-          <div className='menu-icon' onClick={onSubmit}>
-            <i className={on ? 'fas fa-times' : 'fas fa-bars'}></i>
-          </div>
-          <ul className={on ? 'nav-menu active' : 'nav-menu'}>
-            {MenuItems.map((item, index) => {
-              return (
-                <li key={index}>
-                  <a className={item.cName} href={item.url}>
-                    {item.title}
-                  </a>
-                </li>
-              )
-            })}
-          </ul>
-          <Button>Sign up</Button>
-        </nav>
+const handleClick = () => setClick(!click);
+const closeMobileMenu = () => setClick(false);
 
-        <Switch>
-          <Route path='/about'>
-            <AboutUs />
-          </Route>
-          <Route path='/jobs'>
-            <Jobs />
-          </Route>
-          <Route path='/portfolio'>
-            <Portfolio />
-          </Route>
-          <Route path='/dev-dash'>
-            <DevDashboard />  
-          </Route>
-          <Route path='/'>
-            <Home />
-          </Route>
-        </Switch>
-      </Router>
-    </div>
-  )
+const showButton = () => {
+    if (window.innerWidth  <= 960){
+        setButton(false);
+    } else {
+        setButton (true);
+    }
+}
+
+useEffect(() => {
+     showButton()
+}, [])
+
+window.addEventListener('resize', showButton);
+
+    return (
+        <>
+         <IconContext.Provider value={{ color: '#fff' }}>
+            <Nav>
+                <NavbarContainer>
+                    <NavLogo to="./DarkLogo.svg" onClick={closeMobileMenu}> 
+                        <NavIcon />
+                            CAREER SHOCK
+                    </NavLogo>
+                    <MobileIcon onClick={handleClick}>  
+                        {click ? <FaTimes/> : <FaBars />}
+                    </MobileIcon>
+                    <NavMenu onClick={handleClick} click={click}>
+                        <NavItem>
+                            <NavLinks to="/ultra-landing-page">
+                                Home
+                            </NavLinks>
+                        </NavItem>
+                        <NavItem>
+                            <NavLinks to="About">
+                                About
+                            </NavLinks>
+                        </NavItem>
+                        <NavItem>
+                            <NavLinks to="Developers">
+                                Developers
+                            </NavLinks>
+                        </NavItem>
+                        <NavItem>
+                            <NavLinks to="Employers">
+                                Employers
+                            </NavLinks>
+                        </NavItem>
+                        <NavItem>
+                            <NavLinks to="/jobs">
+                                Jobs
+                            </NavLinks>
+                        </NavItem>
+                       
+                        <NavItemBtn>
+                            {button ? (
+                                <NavBtnLink to="/sign-up">
+                                    <Button primary>Sign Up</Button>
+                                </NavBtnLink>
+                            ) : (
+                                <NavBtnLink to="/sign-up">
+                                    <Button fontBig primary>Sign Up</Button>
+                                </NavBtnLink>
+                            )}
+                        </NavItemBtn>
+                    </NavMenu>
+                </NavbarContainer>
+            </Nav>   
+        </IconContext.Provider>
+        </>
+    )
 }
 
 export default Navbar
