@@ -25,7 +25,7 @@ import {
 } from './Footer.elements'
 
 // GLOBAL STYLES
-import { Button } from '../../globalStyles'
+import { Button } from '../GlobalStyle'
 
 const Footer = () => {
     return (
@@ -87,7 +87,7 @@ const Footer = () => {
                         CAREER SHOCK 
                     </SocialLogo>
                     <WebsiteRights>
-                        CODE SHOCK 2021
+                        CODE SHOCK, LLC 2021
                     </WebsiteRights>
                     <SocialIcons>
                         <SocialIconLink href="/" target="_blank" aria-label="Facebook">

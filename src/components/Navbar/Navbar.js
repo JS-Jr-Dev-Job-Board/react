@@ -5,7 +5,7 @@ import { FaTimes, FaBars } from 'react-icons/fa'
 import { IconContext } from 'react-icons/lib'
 
 // GLOBAL STYLES
-import { Button } from '../GlobalStyles'
+import { Button } from '../GlobalStyle'
 
 // COMPONENT'S ELEMENTS
 import {
@@ -50,7 +50,7 @@ window.addEventListener('resize', showButton);
          <IconContext.Provider value={{ color: '#fff' }}>
             <Nav>
                 <NavbarContainer>
-                    <NavLogo to="../DarkLogo.svg" onClick={closeMobileMenu}> 
+                    <NavLogo to ="../DarkLogo.svg" onClick={closeMobileMenu}> 
                         <NavIcon />
                             CAREER SHOCK
                     </NavLogo>

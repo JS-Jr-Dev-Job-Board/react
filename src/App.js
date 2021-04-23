@@ -5,10 +5,12 @@ import { testState } from './store/atom'
 import { ThemeProvider } from 'styled-components'
 //import components here:
 import NavBar from './components/Navbar/Navbar'
+import Footer from './components/Footer/Footer'
 import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp'
 import darkTheme from './theme/darkTheme'
 import lightTheme from './theme/lightTheme'
+import InfoSection from './components/InfoSection/InfoSection'
 
 const App = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(false)

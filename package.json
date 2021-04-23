@@ -14,6 +14,7 @@
     "grommet-icons": "^4.5.0",
     "polished": "^4.1.1",
     "react": "^17.0.1",
+    "react-copyright": "^0.0.1",
     "react-dom": "^17.0.1",
     "react-hook-form": "^6.15.4",
     "react-icon-library": "^0.1.45",
