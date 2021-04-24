@@ -37,9 +37,13 @@ const App = () => {
             <NavBar />
           </header>
           <main>
+            <InfoSection />
             <SignIn />
             <SignUp />
           </main>
+          <footer className = 'App-footer'>
+            <Footer />
+          </footer>
         </div>
       </React.Suspense>
     </ThemeProvider>

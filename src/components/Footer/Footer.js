@@ -1,6 +1,7 @@
 import React from 'react'
 // REACT ICONS
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube, FaLinkedin } from 'react-icons/fa'
+//import Copyright from 'react-copyright'
 
 // COMPONENT'S ELEMENTS
 import {
