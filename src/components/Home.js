@@ -6,14 +6,19 @@ import LogoutBtn from './auth/LogoutBtn'
 import SignIn from './auth/SignIn'
 import SearchBox from './SearchBox/SearchBox'
 import Testimonials from './Testimonials'
-import Footer from './Footer/Footer'
+//import Footer from './Footer/Footer'
+import HomePage from './HomePage/Homepage'
+import GetStarted from './GetStarted/Getstarted'
+import InfoSection from './InfoSection/InfoSection'
+import { homeObjOne} from '../HomePage/Data'
 
-const ComingSoon = styled.h1`
+
+/*const ComingSoon = styled.h1`
   color: ${(pr) => pr.theme.primaryColor};
 `
 const Teaser = styled.p`
   color: ${(pr) => pr.theme.white};
-`
+`*/
 
 const Home = () => {
   return (
@@ -21,10 +26,11 @@ const Home = () => {
       <div className='App'>
         <header className='App-header'>
           <SearchBox />
-          <ComingSoon>Future Home of Something Great</ComingSoon>
-          <Teaser>Get Excited 😲</Teaser>
-          <LoginBtn></LoginBtn>
-          <LogoutBtn></LogoutBtn>
+            
+          <HomePage />
+          <homeObjOne />
+          <InfoSection />      
+          <GetStarted />
         </header>
       </div>
       <div className = "App">
@@ -60,9 +66,7 @@ const Home = () => {
                             Contact Us
                         </FooterLinkTitle>
                         <FooterLink to="/sign-up">Contact Us</FooterLink>
-                        <FooterLink to="/">Contact</FooterLink>
                         <FooterLink to="/">Support</FooterLink>
-                        <FooterLink to="/">Sponsorships</FooterLink>
                     </FooterLinksItems>
                     </FooterLinksWrapper>
                     <FooterLinksWrapper>

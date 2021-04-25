@@ -50,7 +50,7 @@ window.addEventListener('resize', showButton);
          <IconContext.Provider value={{ color: '#fff' }}>
             <Nav>
                 <NavbarContainer>
-                    <NavLogo to ="../DarkLogo.svg" onClick={closeMobileMenu}> 
+                    <NavLogo to ="Home" onClick={closeMobileMenu}> 
                         <NavIcon />
                             CAREER SHOCK
                     </NavLogo>
@@ -75,7 +75,7 @@ window.addEventListener('resize', showButton);
                             </NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="/jobs">
+                            <NavLinks to="jobs">
                                 Jobs
                             </NavLinks>
                         </NavItem>

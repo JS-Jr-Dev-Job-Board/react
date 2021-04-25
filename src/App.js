@@ -11,6 +11,8 @@ import SignUp from './components/auth/SignUp'
 import darkTheme from './theme/darkTheme'
 import lightTheme from './theme/lightTheme'
 import InfoSection from './components/InfoSection/InfoSection'
+//import HomePage from './components/HomePage/Homepage'
+
 
 const App = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(false)
@@ -35,9 +37,9 @@ const App = () => {
           <button onClick={toggleTheme}>toggle theme test</button>
           <header className='App-header'>
             <NavBar />
+            <InfoSection />
           </header>
           <main>
-            <InfoSection />
             <SignIn />
             <SignUp />
           </main>
