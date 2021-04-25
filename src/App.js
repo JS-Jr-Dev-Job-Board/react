@@ -7,9 +7,9 @@ import { Switch, Route } from 'react-router-dom'
 
 //import components here:
 import NavBar from './components/Navbar/Navbar'
+import Footer from './components/Footer/Footer'
 import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp'
-import Footer from './components/Footer/Footer'
 import AboutUs from './components/AboutUs'
 import Jobs from './components/Jobs/Jobs'
 import Portfolio from './components/Portfolio'
@@ -18,6 +18,9 @@ import Home from './components/Home'
 
 import darkTheme from './theme/darkTheme'
 import lightTheme from './theme/lightTheme'
+import InfoSection from './components/InfoSection/InfoSection'
+//import HomePage from './components/HomePage/Homepage'
+
 
 const App = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(false)
@@ -42,6 +45,7 @@ const App = () => {
           <button onClick={toggleTheme}>toggle theme test</button>
           <header className='App-header'>
             <NavBar />
+            <InfoSection />
           </header>
           <main>
             <Switch>
@@ -64,7 +68,9 @@ const App = () => {
             <SignIn />
             <SignUp />
           </main>
-          <Footer />
+          <footer className = 'App-footer'>
+            <Footer />
+          </footer>
         </div>
       </React.Suspense>
     </ThemeProvider>

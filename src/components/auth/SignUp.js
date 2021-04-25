@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 //Image Imports
-import tempSigninImage from '../../assets/tempSigninImage.jpg'
+// import tempSigninImage from '../../assets/tempSigninImage.jpg'
 
 /****** TO DO: ******
   - Add verification that passwords match
@@ -33,7 +33,7 @@ const SignUp = () => {
   return (
     <div>
       <div>
-        <img src={tempSigninImage} alt='placeholder alt text' />
+        {/* <img src={tempSigninImage} alt='placeholder alt text' /> */}
       </div>
 
       <div>

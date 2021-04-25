@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 //Style Imports
 
 //Image Imports
-import tempSigninImage from '../../assets/tempSigninImage.jpg'
+// import tempSigninImage from '../../assets/tempSigninImage.jpg'
 
 //STYLE
 // const SImage = styled(Image)`
@@ -43,7 +43,7 @@ const SignIn = () => {
     <div>
       <div>
         <div>
-          <img src={tempSigninImage} alt='placeholder text' />
+          {/* <img src={tempSigninImage} alt='placeholder text' /> */}
         </div>
       </div>
       <div>
