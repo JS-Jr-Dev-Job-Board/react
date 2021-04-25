@@ -21,7 +21,7 @@ const someUser = {
     'https://via.placeholder.com/200'
   ]
 }
-console.log(someUser.resumes)
+// console.log(someUser.resumes)
 
 const Portfolio = () => {
   return (

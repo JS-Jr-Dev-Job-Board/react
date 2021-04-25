@@ -17,7 +17,7 @@ const fetchJobDetails = selector({
   }
 })
 
-console.log('fetch job details', fetchJobDetails)
+// console.log('fetch job details', fetchJobDetails)
 
 function ApplicationCard({ jobCard }) {
   const jobCards = useRecoilValue(fetchJobDetails)

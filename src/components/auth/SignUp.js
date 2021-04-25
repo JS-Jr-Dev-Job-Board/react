@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 //Image Imports
-import tempSigninImage from '../../assets/tempSigninImage.jpg'
+// import tempSigninImage from '../../assets/tempSigninImage.jpg'
 
 /****** TO DO: ******
   - Add verification that passwords match
@@ -33,7 +33,7 @@ const SignUp = () => {
   return (
     <div>
       <div>
-        <img src={tempSigninImage} alt='placeholder alt text' />
+        {/* <img src={tempSigninImage} alt='placeholder alt text' /> */}
       </div>
 
       <div>
@@ -76,7 +76,7 @@ const SignUp = () => {
           <br />
           {/* This needs to be Linked via Link once Sign up is added to the repo */}
           <br />
-          <a href='#'>Don't have an account? Sign up</a>
+          <a href='/'>Don't have an account? Sign up</a>
         </form>
       </div>
     </div>

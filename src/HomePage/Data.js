@@ -9,7 +9,7 @@ export const homeObjOne = {
     lightText: true,
     topLine: 'Who are we?',
     primary: true,
-    img: require('../../assets/svg-1.svg'),
+    // img: require('../../assets/svg-1.svg'),
     alt: 'Image',
     start: '',
 };

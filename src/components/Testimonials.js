@@ -1,4 +1,3 @@
-import { Box, Carousel, Image } from 'grommet'
 
 const Testimonials = () => {
   return (
