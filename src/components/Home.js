@@ -10,7 +10,7 @@ import Footer from './Footer/Footer'
 import HomePage from '../HomePage/Homepage'
 import GetStarted from './GetStarted/Getstarted'
 import InfoSection from './InfoSection/InfoSection'
-import { homeObjOne } from '../HomePage/Data'
+//import { homeObjOne } from '../HomePage/Data'
 
 /*const ComingSoon = styled.h1`
   color: ${(pr) => pr.theme.primaryColor};
@@ -25,7 +25,6 @@ const Home = () => {
       <div className='App'>
         <header className='App-header'>
           <SearchBox />
-
           <HomePage />
           <homeObjOne />
           <InfoSection />
