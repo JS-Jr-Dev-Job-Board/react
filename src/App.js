@@ -8,9 +8,9 @@ import { Switch, Route } from 'react-router-dom'
 //import components here:
 import NavBar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
-import SignIn from './components/auth/SignIn'
-import SignUp from './components/auth/SignUp'
-import AboutUs from './components/AboutUs'
+// import SignIn from './components/auth/SignIn'
+// import SignUp from './components/auth/SignUp'
+import AboutUs from './components/About/AboutUs'
 import Jobs from './components/Jobs/Jobs'
 import Portfolio from './components/Portfolio'
 import DevDashboard from './components/devdash/DevDashboard'
@@ -65,10 +65,10 @@ const App = () => {
                 <Home />
               </Route>
             </Switch>
-            <SignIn />
-            <SignUp />
+            {/* <SignIn /> */}
+            {/* <SignUp /> */}
           </main>
-          <footer className = 'App-footer'>
+          <footer className='App-footer'>
             <Footer />
           </footer>
         </div>
