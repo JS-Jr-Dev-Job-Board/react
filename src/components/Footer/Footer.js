@@ -5,7 +5,7 @@ import {
   FaInstagram,
   FaTwitter,
   FaYoutube,
-  FaLinkedin
+  FaLinkedin,
 } from 'react-icons/fa'
 //import Copyright from 'react-copyright'
 
@@ -28,7 +28,7 @@ import {
   SocialIcon,
   WebsiteRights,
   SocialIcons,
-  SocialIconLink
+  SocialIconLink,
 } from './Footer.elements'
 
 // GLOBAL STYLES
@@ -67,11 +67,18 @@ const Footer = () => {
         <FooterLinksWrapper>
           <FooterLinksItems>
             <FooterLinkTitle>Social Media</FooterLinkTitle>
-            <FooterLink to='/'>Instagram</FooterLink>
-            <FooterLink to='/'>Facebook</FooterLink>
-            <FooterLink to='/'>Youtube</FooterLink>
-            <FooterLink to='/'>Twitter</FooterLink>
-            <FooterLink to='/'>LinkedIn</FooterLink>
+            <FooterLink herf='https://www.instagram.com/code_shock_dev/'>
+              Instagram
+            </FooterLink>
+            <FooterLink herf='https://www.youtube.com/channel/UChXeB7ef39aG9JgW_R3mv0g'>
+              Youtube
+            </FooterLink>
+            <FooterLink herf='https://twitter.com/code_shock_dev'>
+              Twitter
+            </FooterLink>
+            <FooterLink herf='https://www.linkedin.com/company/code-shock'>
+              LinkedIn
+            </FooterLink>
           </FooterLinksItems>
         </FooterLinksWrapper>
       </FooterLinksContainer>
@@ -83,19 +90,32 @@ const Footer = () => {
           </SocialLogo>
           <WebsiteRights>CODE SHOCK, LLC 2021</WebsiteRights>
           <SocialIcons>
-            <SocialIconLink href='/' target='_blank' aria-label='Facebook'>
-              <FaFacebook />
-            </SocialIconLink>
-            <SocialIconLink href='/' target='_blank' aria-label='Instagram'>
+            <SocialIconLink
+              href='https://www.instagram.com/code_shock_dev/'
+              target='_blank'
+              aria-label='Instagram'
+            >
               <FaInstagram />
             </SocialIconLink>
-            <SocialIconLink href='/' target='_blank' aria-label='Youtube'>
+            <SocialIconLink
+              href='https://www.youtube.com/channel/UChXeB7ef39aG9JgW_R3mv0g'
+              target='_blank'
+              aria-label='Youtube'
+            >
               <FaYoutube />
             </SocialIconLink>
-            <SocialIconLink href='/' target='_blank' aria-label='Twitter'>
+            <SocialIconLink
+              href='https://twitter.com/code_shock_dev'
+              target='_blank'
+              aria-label='Twitter'
+            >
               <FaTwitter />
             </SocialIconLink>
-            <SocialIconLink href='/' target='_blank' aria-label='LinkedIn'>
+            <SocialIconLink
+              href='https://www.linkedin.com/company/code-shock'
+              target='_blank'
+              aria-label='LinkedIn'
+            >
               <FaLinkedin />
             </SocialIconLink>
           </SocialIcons>

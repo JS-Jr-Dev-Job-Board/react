@@ -1,4 +1,3 @@
-// import "./css/App.css";
 import React, { useState, useEffect } from 'react'
 // import { useRecoilState } from 'recoil'
 // import { testState } from './store/atom'
@@ -8,19 +7,17 @@ import { Switch, Route } from 'react-router-dom'
 //import components here:
 import NavBar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
-// import SignIn from './components/auth/SignIn'
-// import SignUp from './components/auth/SignUp'
 import AboutUs from './components/About/AboutUs'
 import Jobs from './components/Jobs/Jobs'
 import Portfolio from './components/Portfolio'
 import DevDashboard from './components/devdash/DevDashboard'
 import Home from './components/Home'
+import Developers from './components/Developers/Developers'
+import Employers from './components/Employers/Employers'
 
 import darkTheme from './theme/darkTheme'
 import lightTheme from './theme/lightTheme'
 import InfoSection from './components/InfoSection/InfoSection'
-//import HomePage from './components/HomePage/Homepage'
-
 
 const App = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(false)
@@ -61,12 +58,16 @@ const App = () => {
               <Route path='/dev-dash'>
                 <DevDashboard />
               </Route>
+              <Route path='/developers'>
+                <Developers />
+              </Route>
+              <Route path='/employers'>
+                <Employers />
+              </Route>
               <Route exact path='/'>
                 <Home />
               </Route>
             </Switch>
-            {/* <SignIn /> */}
-            {/* <SignUp /> */}
           </main>
           <footer className='App-footer'>
             <Footer />
