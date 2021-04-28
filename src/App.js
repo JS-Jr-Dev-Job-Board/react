@@ -1,4 +1,3 @@
-// import "./css/App.css";
 import React, { useState, useEffect } from 'react'
 // import { useRecoilState } from 'recoil'
 // import { testState } from './store/atom'
