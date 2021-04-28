@@ -4,7 +4,7 @@ const Employers = (props) => {
   return (
     <div>
       placeholder from src/components/Employers/Employers.js
-      <h1>Welcome Employers!</h1>
+      <h2>Welcome Employers!</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
         reiciendis. Praesentium facere doloribus at, mollitia corporis repellat?
