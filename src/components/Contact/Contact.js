@@ -1,19 +1,26 @@
 import React from 'react'
 
-import { Form, Input, Label } from './ContactElements'
+import { Form, Input, Label, MessageArea } from './ContactElements'
+import { Button } from '../GlobalStyle'
 
 const Contact = (props) => {
+  const submitHandler = (e) => {
+    e.preventDefault()
+  }
+
   return (
     <div>
-      <Form>
+      <Form onSubmit={submitHandler}>
         <Label htmlFor='name'>
           Name
-          <Input id='name' />
+          <Input id='name' placeholder='name' small />
         </Label>
         <Label htmlFor='email'>
           Email
-          <Input id='email' />
+          <Input id='email' placeholder='email' medium />
         </Label>
+        <MessageArea />
+        <Button big>Submit</Button>
       </Form>
       placeholder from src/components/Contact/Contact.js
       <h2>Contact Us!</h2>

@@ -11,6 +11,7 @@ const theme = {
     secondary: ''
   },
   size: {
+    placeholder: '1.4rem',
     smallest: '1.6rem',
     small: '2.4rem',
     medium: '4rem',
