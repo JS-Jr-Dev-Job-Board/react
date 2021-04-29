@@ -14,6 +14,7 @@ import DevDashboard from './components/devdash/DevDashboard'
 import Home from './components/Home'
 import Developers from './components/Developers/Developers'
 import Employers from './components/Employers/Employers'
+import Contact from './components/Contact/Contact'
 
 import darkTheme from './theme/darkTheme'
 import lightTheme from './theme/lightTheme'
@@ -63,6 +64,9 @@ const App = () => {
               </Route>
               <Route path='/employers'>
                 <Employers />
+              </Route>
+              <Route path='/contact'>
+                <Contact />
               </Route>
               <Route exact path='/'>
                 <Home />

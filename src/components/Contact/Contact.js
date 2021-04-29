@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-const Developers = (props) => {
-  return (
+const Contact = (props) => {
+  return(
     <div>
-      placeholder from src/components/Developers/Developers.js
-      <h2>Welcome Developers!</h2>
+      placeholder from src/components/Contact/Contact.js
+      <h2>Contact Us!</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
         reiciendis. Praesentium facere doloribus at, mollitia corporis repellat?
@@ -15,11 +15,11 @@ const Developers = (props) => {
         placeat! Accusantium excepturi quisquam rerum, ad dignissimos veniam
         nemo voluptatem quo cumque sunt pariatur ea sit quas! Maiores incidunt,
         magnam nobis optio quaerat sequi corrupti necessitatibus beatae in sunt
-        quibusdam.
+        quibusdam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta autem eos amet enim totam molestiae recusandae, illo ab voluptatem sequi expedita facilis sapiente nihil laboriosam atque quo ea consectetur praesentium sint repellendus. Hic nostrum animi labore odio cumque quaerat expedita velit? Reiciendis voluptates sit maiores deserunt soluta praesentium laborum fuga tenetur!
       </p>
-      placeholder from src/components/Developers/Developers.js
+      placeholder from src/components/Contact/Contact.js
     </div>
-  )
-}
+)
+};
 
-export default Developers
+export default Contact;
