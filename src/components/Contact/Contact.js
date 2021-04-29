@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Form, Input, Label, MessageArea } from './ContactElements'
-import { Button } from '../GlobalStyle'
+import { Button, ViewHeader, StyledView } from '../GlobalStyle'
 
 const Contact = (props) => {
   const submitHandler = (e) => {
@@ -9,7 +9,14 @@ const Contact = (props) => {
   }
 
   return (
-    <div>
+    <StyledView>
+      <ViewHeader>Contact Us!</ViewHeader>
+      <p>Have questions or inquires?</p>
+      <p>
+        We've got your answers! Whether you're setting up your account, looking
+        for your first job, your next job, or hoping to sponsor one of our
+        upcoming hackathons, we'd love to hear from you!
+      </p>
       <Form onSubmit={submitHandler}>
         <Label htmlFor='name'>
           Name
@@ -19,21 +26,10 @@ const Contact = (props) => {
           Email
           <Input id='email' placeholder='email' medium />
         </Label>
-        <MessageArea />
+        <MessageArea placeholder="We can't wait to hear from you!" />
         <Button big>Submit</Button>
       </Form>
-      placeholder from src/components/Contact/Contact.js
-      <h2>Contact Us!</h2>
-      <p>
-        quibusdam. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        Soluta autem eos amet enim totam molestiae recusandae, illo ab
-        voluptatem sequi expedita facilis sapiente nihil laboriosam atque quo ea
-        consectetur praesentium sint repellendus. Hic nostrum animi labore odio
-        cumque quaerat expedita velit? Reiciendis voluptates sit maiores
-        deserunt soluta praesentium laborum fuga tenetur!
-      </p>
-      placeholder from src/components/Contact/Contact.js
-    </div>
+    </StyledView>
   )
 }
 

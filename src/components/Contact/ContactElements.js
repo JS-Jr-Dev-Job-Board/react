@@ -1,9 +1,12 @@
 import styled from 'styled-components'
 
 export const Form = styled.form`
-  /* border: 3px solid black; */
   display: flex;
   flex-direction: column;
+  align-items: center;
+  > * {
+    margin: 5px;
+  }
 `
 export const Label = styled.label`
   display: flex;
@@ -21,4 +24,5 @@ export const Input = styled.input`
 export const MessageArea = styled.textarea`
   width: 50%;
   height: 25vh;
+  font-size: ${(props) => props.theme.size.placeholder};
 `
