@@ -1,10 +1,10 @@
 import React from 'react'
+import { ViewHeader, StyledView} from '../GlobalStyle'
 
 const Employers = (props) => {
   return (
-    <div>
-      placeholder from src/components/Employers/Employers.js
-      <h2>Welcome Employers!</h2>
+    <StyledView>
+      <ViewHeader>Welcome Employers!</ViewHeader>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
         reiciendis. Praesentium facere doloribus at, mollitia corporis repellat?
@@ -17,8 +17,7 @@ const Employers = (props) => {
         magnam nobis optio quaerat sequi corrupti necessitatibus beatae in sunt
         quibusdam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta autem eos amet enim totam molestiae recusandae, illo ab voluptatem sequi expedita facilis sapiente nihil laboriosam atque quo ea consectetur praesentium sint repellendus. Hic nostrum animi labore odio cumque quaerat expedita velit? Reiciendis voluptates sit maiores deserunt soluta praesentium laborum fuga tenetur!
       </p>
-      placeholder from src/components/Employers/Employers.js
-    </div>
+    </StyledView>
   )
 }
 
