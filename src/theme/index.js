@@ -1,13 +1,4 @@
-import darkTheme from './darkTheme'
-import lightTheme from './lightTheme'
-
-const localTheme = localStorage.getItem('localTheme')
-let color = localTheme === 'dark' ? darkTheme : lightTheme
-
 const theme = {
-  color: {
-    ...color
-  },
   breakpoint: {
     1: '1440px',
     2: '1024px',
