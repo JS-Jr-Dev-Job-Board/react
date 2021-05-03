@@ -1,25 +1,15 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-//Image Imports
-// import tempSigninImage from '../../assets/tempSigninImage.jpg'
+import { Link, useHistory } from 'react-router-dom'
 
-/****** TO DO: ******
-  - Add verification that passwords match
-    - logic
-    - implement error message if not matching 
-    - disable submit if not matching? or let them hit submit, but then error with message?
-  - Hook it up, fix links
-  - Verify grommet done correctly?
-******/
-
-const initialValues = {
+const initialValue = {
   email: '',
   password: '',
   passwordVerify: ''
 }
 
 const SignUp = () => {
-  const [form, setForm] = useState(initialValues)
+  const [form, setForm] = useState(initialValue)
+  const { push } = useHistory()
 
   const handleChange = (e) => {
     setForm({
@@ -28,49 +18,58 @@ const SignUp = () => {
     })
   }
 
-  const onSubmit = () => {}
+  const submitHandler = (e) => {
+    e.preventDefault()
+
+    if (form.password !== form.passwordVerify) {
+      alert('passwords must match')
+    } else {
+      setForm(initialValue)
+      push('/sign-in')
+    }
+  }
 
   return (
     <div>
-      <div>
-        <h2>Sign Up</h2>
+      <h2>Sign Up</h2>
 
-        <form
-          align='center'
-          onSubmit={({ value }) => console.log('Submit', value)}
-        >
+      <form onSubmit={submitHandler}>
+        <label htmlFor='email'>
           <input
+            id='email'
             onChange={handleChange}
             value={form.email}
             type='email'
             placeholder='Email'
             name='email'
           />
+        </label>
+        <label htmlFor='password'>
           <input
+            id='password'
             onChange={handleChange}
             value={form.password}
             type='password'
             placeholder='Password'
             name='password'
           />
-
+        </label>
+        <label htmlFor='passwordVerify'>
           <input
+            id='passwordVerify'
             onChange={handleChange}
             value={form.passwordVerify}
             type='password'
             placeholder='Re-type Password'
             name='passwordVerify'
           />
+        </label>
+        <button>Register</button>
+      </form>
 
-          <button type='submit' label='Submit' onSubmit={onSubmit}>
-            Register
-          </button>
-
-          <p>
-            Already have an account? <Link to='/sign-in'>Sign in</Link>
-          </p>
-        </form>
-      </div>
+      <p>
+        Already have an account? <Link to='/sign-in'>Sign in</Link>
+      </p>
     </div>
   )
 }
