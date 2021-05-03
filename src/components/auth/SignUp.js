@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import { Link } from 'react-router-dom'
 //Image Imports
 // import tempSigninImage from '../../assets/tempSigninImage.jpg'
 
@@ -33,17 +33,12 @@ const SignUp = () => {
   return (
     <div>
       <div>
-        {/* <img src={tempSigninImage} alt='placeholder alt text' /> */}
-      </div>
-
-      <div>
         <h2>Sign Up</h2>
 
         <form
           align='center'
           onSubmit={({ value }) => console.log('Submit', value)}
         >
-          {/* If we want to have email above the field, place (label="Email") into input below */}
           <input
             onChange={handleChange}
             value={form.email}
@@ -51,8 +46,6 @@ const SignUp = () => {
             placeholder='Email'
             name='email'
           />
-          <br />
-          {/* If we want to have email above the field, place (label="Password") into input below */}
           <input
             onChange={handleChange}
             value={form.password}
@@ -60,7 +53,7 @@ const SignUp = () => {
             placeholder='Password'
             name='password'
           />
-          <br />
+
           <input
             onChange={handleChange}
             value={form.passwordVerify}
@@ -68,15 +61,14 @@ const SignUp = () => {
             placeholder='Re-type Password'
             name='passwordVerify'
           />
-          {/* {errors.password && <p>{errors.password.message}</p>} */}
-          <br />
+
           <button type='submit' label='Submit' onSubmit={onSubmit}>
-            button text
+            Register
           </button>
-          <br />
-          {/* This needs to be Linked via Link once Sign up is added to the repo */}
-          <br />
-          <a href='/'>Don't have an account? Sign up</a>
+
+          <p>
+            Already have an account? <Link to='/sign-in'>Sign in</Link>
+          </p>
         </form>
       </div>
     </div>

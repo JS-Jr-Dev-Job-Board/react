@@ -1,7 +1,6 @@
 import axios from 'axios'
 import React, { useState } from 'react'
-//import { useForm } from "react-hook-form"; //
-//Style Imports
+import { Link } from 'react-router-dom'
 
 //Image Imports
 // import tempSigninImage from '../../assets/tempSigninImage.jpg'
@@ -43,19 +42,9 @@ const SignIn = () => {
     <div>
       <div>
         <div>
-          {/* <img src={tempSigninImage} alt='placeholder text' /> */}
-        </div>
-      </div>
-      <div>
-        <div>
           <h2>Sign In</h2>
 
-          <form
-            align='center'
-            onSubmit={({ value }) => console.log('Submit', value)}
-          >
-            {/* If we want to have email above the field, place (label="Email") into FormField below */}
-
+          <form onSubmit={({ value }) => console.log('Submit', value)}>
             <input
               onChange={change}
               value={form.email}
@@ -63,11 +52,6 @@ const SignIn = () => {
               placeholder='Email'
               name='email'
             />
-
-            <br />
-            <br />
-            {/* If we want to have email above the field, place (label="Password") into FormField below */}
-
             <input
               onChange={change}
               value={form.password}
@@ -78,12 +62,11 @@ const SignIn = () => {
 
             {/* {errors.password && <p>{errors.password.message}</p>} */}
 
-            <br />
-            <input type='submit' label='Submit' onSubmit={onSubmit} />
-            <br />
-            {/* This needs to be Linked via Link once Sign up is added to the repo */}
-            <br />
-            <a href='/'>Don't have an account? Sign up</a>
+            <button onSubmit={onSubmit}>Sign In</button>
+
+            <p>
+              Don't have an account? <Link to='/sign-up'>Sign up</Link>
+            </p>
           </form>
         </div>
       </div>
@@ -91,31 +74,3 @@ const SignIn = () => {
   )
 }
 export default SignIn
-
-//The form validation no longer works. React-Hook-Form and Grommet currently don't work together.
-//Example
-// () => {
-//   const [value, setValue] = React.useState({});
-//   return (
-//     <Form
-//       value={value}
-//       onChange={nextValue => setValue(nextValue)}
-//       onReset={() => setValue({})}
-//       onSubmit={({ value }) => {}}
-//     >
-//       <FormField name="name" htmlFor="text-input-id" label="Name">
-//         <TextInput id="text-input-id" name="name" errors="Passord is required"/>
-//       </FormField>
-//       <Box direction="row" gap="medium">
-//         <Button type="submit" primary label="Submit" />
-//         <Button type="reset" label="Reset" />
-//       </Box>
-//     </Form>
-//   );
-// }
-//Image next to it.
-
-//Use Grommet form validation-- Figure it out
-
-//Enable button
-//Remove from front page
