@@ -7,11 +7,14 @@ const SignIn = () => {
     email: '',
     password: ''
   })
+  console.log(form)
 
-  const change = (e) => {
-    const { value, name } = e.target
-    const valueToUse = value
-    setForm({ ...form, [name]: valueToUse })
+  const changeHandler = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value })
+  }
+
+  const submitHandler = (e) => {
+    e.preventDefault()
   }
 
   //ONSUBMIT-- Recoil, plus react-hook-form
@@ -32,21 +35,27 @@ const SignIn = () => {
       <h2>Sign In</h2>
       {/* {errors.password && <p>{errors.password.message}</p>} */}
 
-      <form>
-        <input
-          onChange={change}
-          value={form.email}
-          type='email'
-          placeholder='Email'
-          name='email'
-        />
-        <input
-          onChange={change}
-          value={form.password}
-          type='password'
-          placeholder='Password'
-          name='password'
-        />
+      <form onSubmit={submitHandler}>
+        <label htmlFor='email'>
+          <input
+            id='email'
+            onChange={changeHandler}
+            value={form.email}
+            type='email'
+            placeholder='Email'
+            name='email'
+          />
+        </label>
+        <label htmlFor='password'>
+          <input
+            id='password'
+            onChange={changeHandler}
+            value={form.password}
+            type='password'
+            placeholder='Password'
+            name='password'
+          />
+        </label>
         <button>Sign In</button>
       </form>
 

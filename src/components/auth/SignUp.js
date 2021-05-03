@@ -11,7 +11,7 @@ const SignUp = () => {
   const [form, setForm] = useState(initialValue)
   const { push } = useHistory()
 
-  const handleChange = (e) => {
+  const changeHandler = (e) => {
     setForm({
       ...form,
       [e.target.name]: e.target.value
@@ -37,7 +37,7 @@ const SignUp = () => {
         <label htmlFor='email'>
           <input
             id='email'
-            onChange={handleChange}
+            onChange={changeHandler}
             value={form.email}
             type='email'
             placeholder='Email'
@@ -47,7 +47,7 @@ const SignUp = () => {
         <label htmlFor='password'>
           <input
             id='password'
-            onChange={handleChange}
+            onChange={changeHandler}
             value={form.password}
             type='password'
             placeholder='Password'
@@ -57,7 +57,7 @@ const SignUp = () => {
         <label htmlFor='passwordVerify'>
           <input
             id='passwordVerify'
-            onChange={handleChange}
+            onChange={changeHandler}
             value={form.passwordVerify}
             type='password'
             placeholder='Re-type Password'
