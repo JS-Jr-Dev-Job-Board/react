@@ -1,13 +1,4 @@
-import darkTheme from './darkTheme'
-import lightTheme from './lightTheme'
-
-const localTheme = localStorage.getItem('localTheme')
-let color = localTheme === 'dark' ? darkTheme : lightTheme
-
 const theme = {
-  color: {
-    ...color
-  },
   breakpoint: {
     1: '1440px',
     2: '1024px',
@@ -20,6 +11,7 @@ const theme = {
     secondary: ''
   },
   size: {
+    placeholder: '1.4rem',
     smallest: '1.6rem',
     small: '2.4rem',
     medium: '4rem',
