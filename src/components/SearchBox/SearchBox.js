@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useRecoilState } from 'recoil'
 import { mainSearchQuery } from '../../store/atom'
 import StyledSearchBox from './StyledSearchBox'
+import {Input} from '../GlobalStyle'
 // Optional props for this component are:
 // 1. 'placeholder', which sets placehold text in the search field and defaults to 'Search' and
 // 2. 'name', which sets the value on the TextInput's name and id attributes and defaults to 'searchBox'.
@@ -29,7 +30,7 @@ const SearchBox = (props) => {
   return (
     <StyledSearchBox onSubmit={submitHandler}>
       <label htmlFor='searchbox'>
-        <input
+        <Input
           type='search'
           aria-label='Search Box Text Field'
           name={searchInfo}

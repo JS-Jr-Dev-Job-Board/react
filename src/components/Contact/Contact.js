@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { Form, Input, Label, MessageArea } from './ContactElements'
-import { Button, ViewHeader, StyledView } from '../GlobalStyle'
+import { MessageArea } from './ContactElements'
+import { Button, ViewHeader, StyledView, Input, Form, Label } from '../GlobalStyle'
 
 const Contact = (props) => {
   const submitHandler = (e) => {

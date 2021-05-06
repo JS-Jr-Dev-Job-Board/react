@@ -1,6 +1,11 @@
 import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 
+// styles
+import { AuthHeader, AuthView } from './auth.elements'
+import { Form, Input, Label, Button } from '../GlobalStyle'
+
+
 const initialValue = {
   email: '',
   password: '',
@@ -30,12 +35,12 @@ const SignUp = () => {
   }
 
   return (
-    <div>
-      <h2>Sign Up</h2>
+    <AuthView>
+      <AuthHeader>Sign Up</AuthHeader>
 
-      <form onSubmit={submitHandler}>
-        <label htmlFor='email'>
-          <input
+      <Form onSubmit={submitHandler}>
+        <Label htmlFor='email'>
+          <Input
             id='email'
             onChange={changeHandler}
             value={form.email}
@@ -43,9 +48,9 @@ const SignUp = () => {
             placeholder='Email'
             name='email'
           />
-        </label>
-        <label htmlFor='password'>
-          <input
+        </Label>
+        <Label htmlFor='password'>
+          <Input
             id='password'
             onChange={changeHandler}
             value={form.password}
@@ -53,24 +58,24 @@ const SignUp = () => {
             placeholder='Password'
             name='password'
           />
-        </label>
-        <label htmlFor='passwordVerify'>
-          <input
+        </Label>
+        <Label htmlFor='passwordVerify'>
+          <Input
             id='passwordVerify'
             onChange={changeHandler}
             value={form.passwordVerify}
             type='password'
-            placeholder='Re-type Password'
+            placeholder='Verfiy Password'
             name='passwordVerify'
           />
-        </label>
-        <button>Register</button>
-      </form>
+        </Label>
+        <Button>Register</Button>
+      </Form>
 
       <p>
         Already have an account? <Link to='/sign-in'>Sign in</Link>
       </p>
-    </div>
+    </AuthView>
   )
 }
 

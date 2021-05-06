@@ -2,6 +2,10 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
+// styles
+import { AuthHeader, AuthView } from './auth.elements'
+import { Form, Input, Label, Button } from '../GlobalStyle'
+
 const SignIn = () => {
   const [form, setForm] = useState({
     email: '',
@@ -31,13 +35,13 @@ const SignIn = () => {
   // }
 
   return (
-    <div>
-      <h2>Sign In</h2>
+    <AuthView>
+      <AuthHeader>Sign In</AuthHeader>
       {/* {errors.password && <p>{errors.password.message}</p>} */}
 
-      <form onSubmit={submitHandler}>
-        <label htmlFor='email'>
-          <input
+      <Form onSubmit={submitHandler}>
+        <Label htmlFor='email'>
+          <Input
             id='email'
             onChange={changeHandler}
             value={form.email}
@@ -45,9 +49,9 @@ const SignIn = () => {
             placeholder='Email'
             name='email'
           />
-        </label>
-        <label htmlFor='password'>
-          <input
+        </Label>
+        <Label htmlFor='password'>
+          <Input
             id='password'
             onChange={changeHandler}
             value={form.password}
@@ -55,14 +59,14 @@ const SignIn = () => {
             placeholder='Password'
             name='password'
           />
-        </label>
-        <button>Sign In</button>
-      </form>
+        </Label>
+        <Button>Sign In</Button>
+      </Form>
 
       <p>
         Don't have an account? <Link to='/sign-up'>Sign up</Link>
       </p>
-    </div>
+    </AuthView>
   )
 }
 export default SignIn
