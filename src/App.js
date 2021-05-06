@@ -72,6 +72,7 @@ const App = () => {
               </Route>
               <Route path='/sign-up'>
                 <SignUp />
+              </Route>
               <Route path='/contact'>
                 <Contact />
               </Route>
