@@ -1,10 +1,10 @@
 import React from 'react'
+import { ViewHeader, StyledView } from '../GlobalStyle'
 
 const Developers = (props) => {
   return (
-    <div>
-      placeholder from src/components/Developers/Developers.js
-      <h1>Welcome Developers!</h1>
+    <StyledView>
+      <ViewHeader>Welcome Developers!</ViewHeader>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
         reiciendis. Praesentium facere doloribus at, mollitia corporis repellat?
@@ -17,8 +17,7 @@ const Developers = (props) => {
         magnam nobis optio quaerat sequi corrupti necessitatibus beatae in sunt
         quibusdam.
       </p>
-      placeholder from src/components/Developers/Developers.js
-    </div>
+    </StyledView>
   )
 }
 

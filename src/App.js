@@ -16,6 +16,8 @@ import Developers from './components/Developers/Developers'
 import Employers from './components/Employers/Employers'
 import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp'
+import Contact from './components/Contact/Contact'
+
 import darkTheme from './theme/darkTheme'
 import lightTheme from './theme/lightTheme'
 import InfoSection from './components/InfoSection/InfoSection'
@@ -70,6 +72,8 @@ const App = () => {
               </Route>
               <Route path='/sign-up'>
                 <SignUp />
+              <Route path='/contact'>
+                <Contact />
               </Route>
               <Route exact path='/'>
                 <Home />
