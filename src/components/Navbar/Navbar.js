@@ -49,7 +49,7 @@ const Navbar = () => {
       <IconContext.Provider value={{ color: '#fff' }}>
         <Nav>
           <NavbarContainer>
-            <NavLogo to='Home' onClick={closeMobileMenu}>
+            <NavLogo to='/' onClick={closeMobileMenu}>
               <NavIcon />
               CAREER SHOCK
             </NavLogo>
@@ -68,6 +68,9 @@ const Navbar = () => {
               </NavItem>
               <NavItem>
                 <NavLinks to='jobs'>Jobs</NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks to='contact'>Contact</NavLinks>
               </NavItem>
 
               <NavItemBtn>

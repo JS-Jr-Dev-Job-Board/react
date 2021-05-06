@@ -1,47 +1,47 @@
-import React from "react";
+import React from 'react'
 import {
   // RecoilRoot,
   atom,
   // selector,
   // useRecoilState,
-  useRecoilValue,
-} from "recoil";
-import styled from "styled-components";
-import TeamMember from "./TeamMember";
+  useRecoilValue
+} from 'recoil'
+import styled from 'styled-components'
+import TeamMember from './TeamMember'
 
 //  Create a state to hold everyone on the team. For now we'll pass in an object, later we'll fetch it from an api first
 const teamMemberState = atom({
-  key: "teamMemberState",
+  key: 'teamMemberState',
   default: [
     {
-      name: "Simone Ballard",
-      pic: "srcimgsimone-ballardPNG.png",
-      description: "Lorem ipsum",
+      name: 'Simone Ballard',
+      pic: 'src/imgsimone-ballardPNG.png',
+      description: 'Lorem ipsum'
     },
     {
-      name: "Aszalea Calderon",
-      pic: "srcimgaszelea-calderonPNG.png",
-      description: "Lorem ipsum",
+      name: 'Aszalea Calderon',
+      pic: 'srcimgaszelea-calderonPNG.png',
+      description: 'Lorem ipsum'
     },
     {
-      name: "Mike Hill",
-      pic: "srcimgmike-hillPNG.png",
-      description: "Lorem ipsum",
-    },
-  ],
-});
+      name: 'Mike Hill',
+      pic: 'srcimgmike-hillPNG.png',
+      description: 'Lorem ipsum'
+    }
+  ]
+})
 
 function AboutUs() {
-  const teamMembers = useRecoilValue(teamMemberState);
+  const teamMembers = useRecoilValue(teamMemberState)
 
   const Container = styled.div`
     display: flex;
     background: #eee;
-  `;
+  `
 
   const Teaser = styled.h4`
     color: ${(pr) => pr.theme.white};
-  `;
+  `
 
   return (
     <Container>
@@ -55,7 +55,7 @@ function AboutUs() {
         <TeamMember key={teamMember.id} member={teamMember} />
       ))}
     </Container>
-  );
+  )
 }
 
-export default AboutUs;
+export default AboutUs
