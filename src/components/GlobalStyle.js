@@ -44,7 +44,6 @@ export const Button = styled.button`
     width: 100%;
   }
 `
-
 export const ViewHeader = styled.h2`
   /* border: 2px solid blue; */
   margin: 10px 0;
@@ -53,9 +52,26 @@ export const ViewHeader = styled.h2`
 export const StyledView = styled.div`
   margin: 30px auto;
   max-width: 80%;
-  p{
+  p {
     font-size: ${(props) => props.theme.size.smallest};
   }
 `
+export const Form = styled.form`
+  /* border: 1px solid red; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+`
+export const Input = styled.input`
+  margin: 10px 0;
+  border-radius: 8px;
+  padding: 6px;
+  font-size: ${(props) => props.theme.size.placeholder};
+  outline: none;
+`
+export const Label = styled.label``
 
 export default GlobalStyle
