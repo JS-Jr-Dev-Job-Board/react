@@ -7,7 +7,7 @@ import { Switch, Route } from 'react-router-dom'
 //import components here:
 import NavBar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
-import AboutUs from './components/AboutUs'
+import AboutUs from './components/About/AboutUs'
 import Jobs from './components/Jobs/Jobs'
 import Portfolio from './components/Portfolio'
 import DevDashboard from './components/devdash/DevDashboard'
