@@ -8,7 +8,8 @@ import SearchBox from './SearchBox/SearchBox'
 import Testimonials from './Testimonials'
 import HomePage from '../HomePage/Homepage'
 import GetStarted from './GetStarted/Getstarted'
-// import { homeObjOne } from '../HomePage/Data'
+import InfoSection from './InfoSection/InfoSection'
+//import { homeObjOne } from '../HomePage/Data'
 
 /*const ComingSoon = styled.h1`
   color: ${(pr) => pr.theme.primaryColor};
@@ -20,10 +21,20 @@ const Teaser = styled.p`
 const Home = () => {
   return (
     <>
-      <SearchBox />
-      <HomePage />
-      {/* <homeObjOne /> */}
-      <GetStarted />
+      <div className='App'>
+        <header className='App-header'>
+          <SearchBox />
+          <HomePage />
+          <homeObjOne />
+          <InfoSection />
+          <GetStarted />
+        </header>
+      </div>
+      <div className='App'>
+        <footer className='App-footer'>
+          <Footer />
+        </footer>
+      </div>
       <Testimonials />
     </>
   )
