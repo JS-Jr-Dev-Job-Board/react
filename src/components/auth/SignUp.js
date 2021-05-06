@@ -1,84 +1,75 @@
 import React, { useState } from 'react'
+import { Link, useHistory } from 'react-router-dom'
 
-//Image Imports
-// import tempSigninImage from '../../assets/tempSigninImage.jpg'
-
-/****** TO DO: ******
-  - Add verification that passwords match
-    - logic
-    - implement error message if not matching 
-    - disable submit if not matching? or let them hit submit, but then error with message?
-  - Hook it up, fix links
-  - Verify grommet done correctly?
-******/
-
-const initialValues = {
+const initialValue = {
   email: '',
   password: '',
   passwordVerify: ''
 }
 
 const SignUp = () => {
-  const [form, setForm] = useState(initialValues)
+  const [form, setForm] = useState(initialValue)
+  const { push } = useHistory()
 
-  const handleChange = (e) => {
+  const changeHandler = (e) => {
     setForm({
       ...form,
       [e.target.name]: e.target.value
     })
   }
 
-  const onSubmit = () => {}
+  const submitHandler = (e) => {
+    e.preventDefault()
+
+    if (form.password !== form.passwordVerify) {
+      alert('passwords must match')
+    } else {
+      setForm(initialValue)
+      push('/sign-in')
+    }
+  }
 
   return (
     <div>
-      <div>
-        {/* <img src={tempSigninImage} alt='placeholder alt text' /> */}
-      </div>
+      <h2>Sign Up</h2>
 
-      <div>
-        <h2>Sign Up</h2>
-
-        <form
-          align='center'
-          onSubmit={({ value }) => console.log('Submit', value)}
-        >
-          {/* If we want to have email above the field, place (label="Email") into input below */}
+      <form onSubmit={submitHandler}>
+        <label htmlFor='email'>
           <input
-            onChange={handleChange}
+            id='email'
+            onChange={changeHandler}
             value={form.email}
             type='email'
             placeholder='Email'
             name='email'
           />
-          <br />
-          {/* If we want to have email above the field, place (label="Password") into input below */}
+        </label>
+        <label htmlFor='password'>
           <input
-            onChange={handleChange}
+            id='password'
+            onChange={changeHandler}
             value={form.password}
             type='password'
             placeholder='Password'
             name='password'
           />
-          <br />
+        </label>
+        <label htmlFor='passwordVerify'>
           <input
-            onChange={handleChange}
+            id='passwordVerify'
+            onChange={changeHandler}
             value={form.passwordVerify}
             type='password'
             placeholder='Re-type Password'
             name='passwordVerify'
           />
-          {/* {errors.password && <p>{errors.password.message}</p>} */}
-          <br />
-          <button type='submit' label='Submit' onSubmit={onSubmit}>
-            button text
-          </button>
-          <br />
-          {/* This needs to be Linked via Link once Sign up is added to the repo */}
-          <br />
-          <a href='/'>Don't have an account? Sign up</a>
-        </form>
-      </div>
+        </label>
+        <button>Register</button>
+      </form>
+
+      <p>
+        Already have an account? <Link to='/sign-in'>Sign in</Link>
+      </p>
     </div>
   )
 }
