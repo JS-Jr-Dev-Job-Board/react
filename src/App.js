@@ -1,26 +1,18 @@
 import React, { useState, useEffect } from 'react'
-// import { useRecoilState } from 'recoil'
-// import { testState } from './store/atom'
 import { ThemeProvider } from 'styled-components'
 import { Switch, Route } from 'react-router-dom'
 
 //import components here:
-import NavBar from './components/Navbar/Navbar'
-import Footer from './components/Footer/Footer'
-import AboutUs from './components/About/AboutUs'
-import Jobs from './components/Jobs/Jobs'
-import Portfolio from './components/Portfolio'
-import DevDashboard from './components/devdash/DevDashboard'
-import Home from './components/Home'
-import Developers from './components/Developers/Developers'
-import Employers from './components/Employers/Employers'
-import SignIn from './components/auth/SignIn'
-import SignUp from './components/auth/SignUp'
-import Contact from './components/Contact/Contact'
+import Nav from './components/global/nav/Nav'
+import Team from './components/unauthenticated/team/Team'
+import Landing from './components/unauthenticated/landing/LandingMain'
+import Employers from './components/unauthenticated/employers/Employers'
+import Developers from './components/unauthenticated/developers/Developers'
+import Contact from './components/unauthenticated/contact/Contact'
+import Footer from './components/global/footer/Footer'
 
 import darkTheme from './theme/darkTheme'
 import lightTheme from './theme/lightTheme'
-import InfoSection from './components/InfoSection/InfoSection'
 
 const App = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(false)
@@ -37,29 +29,17 @@ const App = () => {
     localStorage.setItem('localTheme', localThemeVal)
   }
 
-  // const [test, setTest] = useRecoilState(testState)
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <React.Suspense fallback={<div>Loading...</div>}>
-        <div className='App'>
-          <button onClick={toggleTheme}>toggle theme test</button>
-          <header className='App-header'>
-            <NavBar />
-            <InfoSection />
+        <div>
+          <header>
+            <Nav />
           </header>
           <main>
             <Switch>
-              <Route path='/about'>
-                <AboutUs />
-              </Route>
-              <Route path='/jobs'>
-                <Jobs />
-              </Route>
-              <Route path='/portfolio'>
-                <Portfolio />
-              </Route>
-              <Route path='/dev-dash'>
-                <DevDashboard />
+              <Route path='/team'>
+                <Team />
               </Route>
               <Route path='/developers'>
                 <Developers />
@@ -67,17 +47,17 @@ const App = () => {
               <Route path='/employers'>
                 <Employers />
               </Route>
-              <Route path='/sign-in'>
+              {/* <Route path='/sign-in'>
                 <SignIn />
               </Route>
               <Route path='/sign-up'>
                 <SignUp />
-              </Route>
+              </Route> */}
               <Route path='/contact'>
                 <Contact />
               </Route>
               <Route exact path='/'>
-                <Home />
+                <Landing />
               </Route>
             </Switch>
           </main>
