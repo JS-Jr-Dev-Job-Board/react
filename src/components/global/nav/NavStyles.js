@@ -7,14 +7,14 @@ export const Container = styled.div`
 `
 export const NavLinks = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 35%;
 `
 
 export const Ul = styled.ul`
   list-style-type: none;
   display: flex;
-  justify-content: space-space-evenly;
+  justify-content: space-evenly;
   align-items: center;
 `
 

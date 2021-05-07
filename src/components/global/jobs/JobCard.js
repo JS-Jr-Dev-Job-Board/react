@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRecoilValue, selector } from 'recoil'
 import { Container, Card } from './JobStyles'
+import { Button } from '../styles/GlobalStyles'
 
 const url = `https://js-jr-dev-board.herokuapp.com/api/v1/jobs`
 
@@ -48,7 +49,7 @@ const JobCard = ({ jobCard }) => {
                       <p>{jobs.description}</p>
                     </div>
                     <div className='JobCardApply'>
-                      <button>replacement for grommet</button>
+                      <Button>Apply</Button>
                       {/* <Button
                             //functioning link to applyUrl
                             href={jobs.applyUrl}

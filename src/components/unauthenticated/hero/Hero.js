@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Text } from './HeroStyles'
+import { Button } from '../../global/styles/GlobalStyles'
 
 const Hero = () => {
   return (
@@ -16,7 +17,7 @@ const Hero = () => {
           You’ll be dead. This little one isn’t worth the effort. Come let me
           buy you something…
         </Text>
-        <button>Apply now</button>
+        <Button>Apply now</Button>
       </div>
       <div>
         <img src='https://via.placeholder.com/400' alt='place holder' />
