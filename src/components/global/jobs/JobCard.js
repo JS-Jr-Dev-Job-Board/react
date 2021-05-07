@@ -1,8 +1,6 @@
 import React from 'react'
 import { useRecoilValue, selector } from 'recoil'
-//import GrommetTheme from "../theme/grommetTheme"
-// import { Box, Button, Card, Grommet, Form, Heading } from "grommet";
-// import { grommet } from "grommet/themes";
+import { Container, Card } from './JobStyles'
 
 const url = `https://js-jr-dev-board.herokuapp.com/api/v1/jobs`
 
@@ -24,7 +22,7 @@ const JobCard = ({ jobCard }) => {
   const jobCards = useRecoilValue(fetchJobDetails)
   console.log('fetching data', jobCards)
   return (
-    <div className='card'>
+    <Container>
       <div>
         {Object.keys(jobCards).map((key) => {
           return (
@@ -69,7 +67,7 @@ const JobCard = ({ jobCard }) => {
           )
         })}
       </div>
-    </div>
+    </Container>
   )
 }
 

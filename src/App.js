@@ -13,6 +13,7 @@ import Footer from './components/global/footer/Footer'
 
 import darkTheme from './theme/darkTheme'
 import lightTheme from './theme/lightTheme'
+import { Container } from './AppStyles'
 
 const App = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(false)
@@ -32,11 +33,11 @@ const App = () => {
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <React.Suspense fallback={<div>Loading...</div>}>
-        <div>
+        <>
           <header>
             <Nav />
           </header>
-          <main>
+          <Container>
             <Switch>
               <Route path='/team'>
                 <Team />
@@ -60,11 +61,11 @@ const App = () => {
                 <Landing />
               </Route>
             </Switch>
-          </main>
+          </Container>
           <footer className='App-footer'>
             <Footer />
           </footer>
-        </div>
+        </>
       </React.Suspense>
     </ThemeProvider>
   )

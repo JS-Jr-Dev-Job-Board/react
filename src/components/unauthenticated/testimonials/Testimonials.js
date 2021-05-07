@@ -1,12 +1,11 @@
+import React from 'react'
+import { Container } from './TestimonialStyles'
+
 const Testimonials = () => {
   return (
     // <Box height='small' width='medium' overflow='hidden'>
     // <Carousel fill>
-    <div>
-      <img
-        alt={'placeholder'}
-        src='//v2.grommet.io/assets/Wilderpeople_Ricky.jpg'
-      />
+    <Container>
       <img
         alt={'placeholder'}
         src='https://i.ibb.co/N7JcvCR/testimonial1.jpg'
@@ -15,7 +14,7 @@ const Testimonials = () => {
         alt={'placeholder'}
         src='https://i.ibb.co/N7JcvCR/testimonial1.jpg'
       />
-    </div>
+    </Container>
     // </Carousel>
     // </Box>
   )

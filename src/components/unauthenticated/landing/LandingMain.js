@@ -1,9 +1,16 @@
 import React from 'react'
+import Hero from '../hero/Hero'
+import Jobs from '../jobs/Jobs'
+import Testimonials from '../testimonials/Testimonials'
+import Contact from '../contact/Contact'
 
 const LandingMain = () => {
   return (
     <div>
-      <h2>Main Landing Page when hitting https://careershock.dev</h2>
+      <Hero />
+      <Jobs />
+      <Testimonials />
+      <Contact />
     </div>
   )
 }

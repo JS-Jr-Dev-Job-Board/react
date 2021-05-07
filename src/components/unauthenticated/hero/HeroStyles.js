@@ -2,9 +2,9 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   display: flex;
+  margin: 20px 0;
 `
 
-export const Card = styled.div`
-  border: 1px solid gray;
-  width: 30%;
+export const Text = styled.p`
+  padding-right: 15px;
 `
