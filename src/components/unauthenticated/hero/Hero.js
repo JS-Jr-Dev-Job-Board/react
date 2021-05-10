@@ -1,11 +1,10 @@
 import React from 'react'
-import { Container, Text } from './HeroStyles'
-import { Button } from '../../global/styles/GlobalStyles'
+import { Container, Text, TextContainer, ImgContainer } from './HeroStyles'
 
 const Hero = () => {
   return (
     <Container>
-      <div>
+      <TextContainer>
         <h1>Get your first junior js job</h1>
         <Text>
           We don’t serve their kind here! What? Your droids. They’ll have to
@@ -17,11 +16,11 @@ const Hero = () => {
           You’ll be dead. This little one isn’t worth the effort. Come let me
           buy you something…
         </Text>
-        <Button>Apply now</Button>
-      </div>
-      <div>
+        <button>Apply now</button>
+      </TextContainer>
+      <ImgContainer>
         <img src='https://via.placeholder.com/400' alt='place holder' />
-      </div>
+      </ImgContainer>
     </Container>
   )
 }

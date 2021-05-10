@@ -5,7 +5,7 @@ import { Button } from '../styles/GlobalStyles'
 const Nav = () => {
   return (
     <Container>
-      <h2>Career Shock, LLC</h2>
+      <h2>Career Shock</h2>
       <NavLinks>
         <Ul>
           <li>home</li>
