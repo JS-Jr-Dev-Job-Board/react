@@ -1,6 +1,12 @@
 import React from 'react'
 import { useRecoilValue, selector } from 'recoil'
-import { Container, Card } from './JobStyles'
+import {
+  Container,
+  Card,
+  Img,
+  PositionText,
+  DescriptionText
+} from './JobStyles'
 
 const url = `https://js-jr-dev-board.herokuapp.com/api/v1/jobs`
 
@@ -15,58 +21,60 @@ const fetchJobDetails = selector({
     } catch (error) {
       throw error
     }
-  },
+  }
 })
 
 const JobCard = ({ jobCard }) => {
   const jobCards = useRecoilValue(fetchJobDetails)
-  console.log('fetching data', jobCards)
+  const jobsArr = jobCards.jobs
+
   return (
     <Container>
-      <div>
-        {Object.keys(jobCards).map((key) => {
-          return (
-            <div key={key}>
-              {jobCards[key].map((jobs) => {
-                return (
-                  <form>
-                    {/* <Form align="center"> */}
-                    {/* <Card key={jobs.id} margin="xlarge" pad="large"> */}{' '}
-                    {/* <Heading>{jobs.companyName}</Heading> */}
-                    <h2>{jobs.companyName}</h2>
+      {jobsArr.map((job) => {
+        return (
+          <Card>
+            <Img src='https://via.placeholder.com/150' alt='' srcset='' />
+            <PositionText>{job.position}</PositionText>
+            <DescriptionText>{job.description}</DescriptionText>
+          </Card>
+        )
+      })}
+      {/* console.log('fetching data', jobCards)
+  return (
+    <Container>
+      {Object.keys(jobCards).map((key) => {
+        console.log('keys', key)
+        return (
+          <div key={key}>
+            {jobCards[key].map((jobs) => {
+              console.log('jobs', jobs)
+              return (
+                <div>
+                </div>
+                <form>
+                  <h2>{jobs.companyName}</h2>
+                  <div>
                     <div>
-                      <div>
-                        <h3>Position: {jobs.position}</h3>
-                      </div>
-                      <div>
-                        <h3>Salary: {jobs.salary}</h3>
-                      </div>
-                      <div>
-                        <h3> Location: {jobs.location}</h3>
-                      </div>
-                      <h3>Job Description:</h3>
-                      <p>{jobs.description}</p>
+                      <h3>Position: {jobs.position}</h3>
                     </div>
-                    <div className='JobCardApply'>
-                      <button>replacement for grommet</button>
-                      {/* <Button
-                            //functioning link to applyUrl
-                            href={jobs.applyUrl}
-                            focusIndicator="true"
-                            type="reset"
-                            label="Apply"
-                            primary
-                            /> */}
+                    <div>
+                      <h3>Salary: {jobs.salary}</h3>
                     </div>
-                    {/* </Card> */}
-                    {/* </Form> */}
-                  </form>
-                )
-              })}
-            </div>
-          )
-        })}
-      </div>
+                    <div>
+                      <h3> Location: {jobs.location}</h3>
+                    </div>
+                    <h3>Job Description:</h3>
+                    <p>{jobs.description}</p>
+                  </div>
+                  <div className='JobCardApply'>
+                    <button>replacement for grommet</button>
+                  </div>
+                </form>
+              )
+            })}
+          </div>
+        )
+      })} */}
     </Container>
   )
 }
