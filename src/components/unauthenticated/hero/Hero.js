@@ -1,12 +1,12 @@
 import React from 'react'
 import { Container, Text, TextContainer, ImgContainer } from './HeroStyles'
-import { Button } from '../../global/styles/GlobalStyles'
+import { Button, SectionHeader, SectionContainer } from '../../global/styles/GlobalStyles'
 
 const Hero = () => {
   return (
-    <Container>
+    <SectionContainer>
       <TextContainer>
-        <h1>Get your first junior js job</h1>
+        <SectionHeader>Get your first junior js job</SectionHeader>
         <Text>
           We don’t serve their kind here! What? Your droids. They’ll have to
           wait outside. We don’t want them here. Listen, why don’t you wait out
@@ -22,7 +22,7 @@ const Hero = () => {
       <ImgContainer>
         <img src='https://via.placeholder.com/400' alt='place holder' />
       </ImgContainer>
-    </Container>
+    </SectionContainer>
   )
 }
 
