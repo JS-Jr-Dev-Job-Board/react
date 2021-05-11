@@ -1,6 +1,7 @@
 import React from 'react'
-import { Container, Heading, Button } from './JobStyles'
+import { Container, Heading } from './JobStyles'
 import JobCard from '../../global/jobs/JobCard'
+import { Button } from '../../global/styles/GlobalStyles'
 
 const Jobs = () => {
   return (

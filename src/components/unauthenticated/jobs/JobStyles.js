@@ -14,12 +14,3 @@ export const Heading = styled.h2`
   text-align: center;
   /* padding: 15px; */
 `
-
-export const Button = styled.button`
-  border: 0;
-  outline: 0;
-  padding: 10px 15px;
-  border-radius: 8px;
-  color: white;
-  background: lightskyblue;
-`

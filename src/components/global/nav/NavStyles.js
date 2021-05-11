@@ -6,13 +6,8 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  button {
-    font-size: 20px;
-    outline: none;
-    border: none;
-    padding: 5px 20px;
-  }
 `
+
 export const NavLinks = styled.div`
   display: flex;
   justify-content: space-around;
