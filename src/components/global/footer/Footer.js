@@ -1,10 +1,57 @@
-import React from 'react'
+import {
+  SocialMediaWrapper,
+  SocialIconLink,
+  SocialIcons,
+  SocialLogo
+} from './FooterStyles'
+import {
+  // FaFacebook,
+  FaInstagram,
+  FaTwitter,
+  FaYoutube,
+  FaLinkedin
+} from 'react-icons/fa'
 
 const Footer = () => {
   return (
-    <div>
-      <h2>Footer</h2>
-    </div>
+    <SocialMediaWrapper>
+      <SocialLogo to='/'>CAREER SHOCK</SocialLogo>
+      <p>CODE SHOCK, LLC 2021</p>
+      <SocialIcons>
+        <SocialIconLink
+          href='https://www.instagram.com/code_shock_dev/'
+          target='_blank'
+          rel='noreferrer'
+          aria-label='Instagram'
+        >
+          <FaInstagram />
+        </SocialIconLink>
+        <SocialIconLink
+          href='https://www.youtube.com/channel/UChXeB7ef39aG9JgW_R3mv0g'
+          target='_blank'
+          rel='noreferrer'
+          aria-label='Youtube'
+        >
+          <FaYoutube />
+        </SocialIconLink>
+        <SocialIconLink
+          href='https://twitter.com/code_shock_dev'
+          target='_blank'
+          rel='noreferrer'
+          aria-label='Twitter'
+        >
+          <FaTwitter />
+        </SocialIconLink>
+        <SocialIconLink
+          href='https://www.linkedin.com/company/code-shock'
+          target='_blank'
+          rel='noreferrer'
+          aria-label='LinkedIn'
+        >
+          <FaLinkedin />
+        </SocialIconLink>
+      </SocialIcons>
+    </SocialMediaWrapper>
   )
 }
 
