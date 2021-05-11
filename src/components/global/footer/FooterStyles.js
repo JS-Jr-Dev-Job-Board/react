@@ -1,10 +1,11 @@
 // Footer styles
 import styled from 'styled-components'
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 export const SocialMediaWrapper = styled.div`
   display: flex;
   justify-content: space-around;
+  align-items: center;
   padding: 20px 0;
 `
 
@@ -17,6 +18,11 @@ export const SocialIcons = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 240px;
+`
+
+export const SocialCopyright = styled.p`
+  color: #aaa;
+  font-size: 24px;
 `
 
 export const SocialLogo = styled(Link)`

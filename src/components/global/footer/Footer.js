@@ -2,7 +2,8 @@ import {
   SocialMediaWrapper,
   SocialIconLink,
   SocialIcons,
-  SocialLogo
+  SocialLogo,
+  SocialCopyright
 } from './FooterStyles'
 import {
   // FaFacebook,
@@ -16,7 +17,7 @@ const Footer = () => {
   return (
     <SocialMediaWrapper>
       <SocialLogo to='/'>CAREER SHOCK</SocialLogo>
-      <p>CODE SHOCK, LLC 2021</p>
+      <SocialCopyright>CODE SHOCK, LLC 2021</SocialCopyright>
       <SocialIcons>
         <SocialIconLink
           href='https://www.instagram.com/code_shock_dev/'
