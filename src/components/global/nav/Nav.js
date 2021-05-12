@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Ul, NavLinks } from './NavStyles'
 import { Button } from '../styles/GlobalStyles'
+import { Link } from 'react-router-dom'
 
 const Nav = () => {
   return (
@@ -8,8 +9,12 @@ const Nav = () => {
       <h2>Career Shock</h2>
       <NavLinks>
         <Ul>
-          <li>home</li>
-          <li>team</li>
+          <Link to='/'>
+            <li>home</li>
+          </Link>
+          <Link to='/team'>
+            <li>team</li>
+          </Link>
           <li>jobs</li>
           <li>employers</li>
         </Ul>

@@ -1,4 +1,4 @@
-const teamProfileData = () => [
+const teamProfileData = [
   {
     name: 'Alexandra Myers',
     image: 'https://avatars.githubusercontent.com/u/68043105?v=4',

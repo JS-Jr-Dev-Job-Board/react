@@ -1,38 +1,8 @@
-import React from 'react'
-import {
-  // RecoilRoot,
-  atom,
-  // selector,
-  // useRecoilState,
-  useRecoilValue,
-} from 'recoil'
-import styled from 'styled-components'
+import { Container, Teaser, TeamContainer } from './TeamStyles'
+import profileData from './team_profile_data'
 import TeamMember from './TeamMember'
 
-//  Create a state to hold everyone on the team. For now we'll pass in an object, later we'll fetch it from an api first
-const teamMemberState = atom({
-  key: 'teamMemberState',
-  default: [
-    {
-      name: 'Aszalea Calderon',
-      pic: 'srcimgaszelea-calderonPNG.png',
-      description: 'Lorem ipsum',
-    },
-  ],
-})
-
-function AboutUs() {
-  const teamMembers = useRecoilValue(teamMemberState)
-
-  const Container = styled.div`
-    display: flex;
-    background: #eee;
-  `
-
-  const Teaser = styled.h4`
-    color: ${(pr) => pr.theme.white};
-  `
-
+function Team() {
   return (
     <Container>
       <h1>About Us</h1>
@@ -41,11 +11,14 @@ function AboutUs() {
         field they are entering and helping other junior devs find a quality
         first job! Read About Our Talented Team Below:
       </Teaser>
-      {teamMembers.map((teamMember) => (
-        <TeamMember key={teamMember.id} member={teamMember} />
-      ))}
+      <TeamContainer>
+        {profileData.map((member) => {
+          console.log(member)
+          return <TeamMember key={member.name} member={member} />
+        })}
+      </TeamContainer>
     </Container>
   )
 }
 
-export default AboutUs
+export default Team
