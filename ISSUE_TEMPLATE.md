@@ -1,3 +1,5 @@
+## **Please delete any part below not needed!**
+
 # Expected Behavior
 
 Please describe the behavior you are expecting
@@ -22,11 +24,11 @@ Please provide detailed steps for reproducing the issue.
 
 Please provide any relevant information about your setup. This is important in case the issue is not reproducible except for under certain conditions.
 
-* Firmware Version:
-* Operating System:
-* SDK version:
-* Toolchain version:
+- Firmware Version:
+- Operating System:
+- SDK version:
+- Toolchain version:
 
 ## Failure Logs
 
-Please include any relevant log snippets or files here.
+Please include any relevant log snippets or files here. Use an online screen shot url if needed.
