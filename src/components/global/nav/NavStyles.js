@@ -19,10 +19,10 @@ export const Ul = styled.ul`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  li {
-    font-size: 20px;
-    padding: 5px 10px;
-  }
 `
 
-export const Li = styled.li``
+export const Li = styled.li`
+  font-size: 20px;
+  padding: 5px 10px;
+  text-decoration: none;
+`
