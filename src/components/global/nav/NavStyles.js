@@ -24,5 +24,4 @@ export const Ul = styled.ul`
 export const Li = styled.li`
   font-size: 20px;
   padding: 5px 10px;
-  text-decoration: none;
 `
