@@ -14,7 +14,7 @@ const theme = {
     placeholder: '1.4rem',
     smallest: '1.6rem',
     small: '2.4rem',
-    medium: '4rem',
+    medium: '3.6rem',
     large: '8rem',
     largest: '16rem'
   },

@@ -1,10 +1,10 @@
 import React from 'react'
-import { ViewHeader, StyledView } from '../../global/styles/GlobalStyles'
+import { SectionHeader, StyledView } from '../../global/styles/GlobalStyles'
 
 const Developers = (props) => {
   return (
     <StyledView>
-      <ViewHeader>Welcome Developers!</ViewHeader>
+      <SectionHeader>Welcome Developers!</SectionHeader>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
         reiciendis. Praesentium facere doloribus at, mollitia corporis repellat?

@@ -3,10 +3,11 @@ import React from 'react'
 import { MessageArea, Container, FormDiv, TextDiv, Text } from './ContactStyles'
 import {
   Button,
-  ViewHeader,
+  SectionHeader,
   Input,
   Form,
   Label,
+  SectionContainer
 } from '../../global/styles/GlobalStyles'
 
 const Contact = (props) => {
@@ -15,9 +16,9 @@ const Contact = (props) => {
   }
 
   return (
-    <Container>
+    <SectionContainer background='#d3d3d3'>
       <TextDiv>
-        <ViewHeader>Contact Us!</ViewHeader>
+        <SectionHeader>Contact Us!</SectionHeader>
         <p>Have questions or inquires?</p>
         <Text>
           We've got your answers! Whether you're setting up your account,
@@ -37,7 +38,7 @@ const Contact = (props) => {
           <Button big>Submit</Button>
         </Form>
       </FormDiv>
-    </Container>
+    </SectionContainer>
   )
 }
 

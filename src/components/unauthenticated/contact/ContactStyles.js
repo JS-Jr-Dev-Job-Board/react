@@ -5,13 +5,7 @@ export const MessageArea = styled.textarea`
   height: 25vh;
   font-size: ${(props) => props.theme.size.placeholder};
 `
-export const Container = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  background: #d3d3d3;
-  margin-bottom: 20px;
-`
+
 export const FormDiv = styled.div`
   width: 50%;
 `

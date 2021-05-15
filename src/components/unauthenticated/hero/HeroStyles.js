@@ -20,16 +20,6 @@ export const TextContainer = styled.div`
   height: 400px;
   align-items: flex-start;
   justify-content: space-around;
-
-  button {
-    border-radius: 8px;
-    border: 0;
-    outline: 0;
-    padding: 10px 15px;
-    background-color: lightskyblue;
-    color: white;
-    font-weight: bold;
-  }
 `
 
 export const Text = styled.p`
