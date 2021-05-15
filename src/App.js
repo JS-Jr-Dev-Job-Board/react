@@ -9,6 +9,8 @@ import Landing from './components/unauthenticated/landing/LandingMain'
 import Employers from './components/unauthenticated/employers/Employers'
 import Developers from './components/unauthenticated/developers/Developers'
 import Contact from './components/unauthenticated/contact/Contact'
+import Register from './components/unauthenticated/auth_forms/Register'
+import Login from './components/unauthenticated/auth_forms/Login'
 import Footer from './components/global/footer/Footer'
 
 import darkTheme from './theme/darkTheme'
@@ -48,12 +50,12 @@ const App = () => {
               <Route path='/employers'>
                 <Employers />
               </Route>
-              {/* <Route path='/sign-in'>
-                <SignIn />
+              <Route path='/login'>
+                <Login />
               </Route>
-              <Route path='/sign-up'>
-                <SignUp />
-              </Route> */}
+              <Route path='/register'>
+                <Register />
+              </Route>
               <Route path='/contact'>
                 <Contact />
               </Route>
