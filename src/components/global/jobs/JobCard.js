@@ -1,11 +1,12 @@
 import React from 'react'
 import { useRecoilValue, selector } from 'recoil'
+import { Button } from '../styles/GlobalStyles'
 import {
   Container,
   Card,
   Img,
   PositionText,
-  DescriptionText,
+  DescriptionText
 } from './JobStyles'
 
 const url = `https://js-jr-dev-board.herokuapp.com/api/v1/jobs`
@@ -21,7 +22,7 @@ const fetchJobDetails = selector({
     } catch (error) {
       throw error
     }
-  },
+  }
 })
 
 const JobCard = ({ jobCard }) => {
@@ -36,6 +37,7 @@ const JobCard = ({ jobCard }) => {
             <Img src='https://via.placeholder.com/150' alt='' srcset='' />
             <PositionText>{job.position}</PositionText>
             <DescriptionText>{job.description}</DescriptionText>
+            <Button>Apply</Button>
           </Card>
         )
       })}
