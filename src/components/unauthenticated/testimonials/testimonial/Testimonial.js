@@ -15,8 +15,8 @@ const Testimonial = ({ data }) => {
       <Img src='https://via.placeholder.com/150' alt='' srcset='' />
       <TestimonialBody>
         <Stars>
-          {data.stars.map((star) => (
-            <AiFillStar />
+          {data.stars.map((star, i) => (
+            <AiFillStar key={i} />
           ))}
         </Stars>
         <TestimonialText>{data.text}</TestimonialText>

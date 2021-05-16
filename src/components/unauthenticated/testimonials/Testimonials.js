@@ -11,11 +11,11 @@ import data from './testimonials.json'
 
 const Testimonials = () => {
   return (
-    <SectionContainer column wrap>
+    <SectionContainer column>
       <SectionHeader>Testimonials</SectionHeader>
       <Carousel>
         {data.map((testimonial) => {
-          return <Testimonial data={testimonial} />
+          return <Testimonial data={testimonial} key={testimonial.id} />
         })}
       </Carousel>
     </SectionContainer>
