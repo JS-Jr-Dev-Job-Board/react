@@ -12,6 +12,7 @@ import Contact from './components/unauthenticated/contact/Contact'
 import Register from './components/unauthenticated/auth_forms/Register'
 import Login from './components/unauthenticated/auth_forms/Login'
 import Footer from './components/global/footer/Footer'
+import Dashboard from './components/authenticated/dashboard/Dashboard'
 
 import darkTheme from './theme/darkTheme'
 import lightTheme from './theme/lightTheme'
@@ -43,6 +44,9 @@ const App = () => {
             <Switch>
               <Route path='/team'>
                 <Team />
+              </Route>
+              <Route path='/dashboard'>
+                <Dashboard />
               </Route>
               <Route path='/developers'>
                 <Developers />
