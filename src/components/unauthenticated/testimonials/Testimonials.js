@@ -7,15 +7,16 @@ import {
 import { Carousel } from './TestimonialStyles'
 
 import Testimonial from './testimonial/Testimonial'
+import data from './testimonials.json'
 
 const Testimonials = () => {
   return (
     <SectionContainer column>
       <SectionHeader>Testimonials</SectionHeader>
-      {/* Carousel */}
       <Carousel>
-        <Testimonial />
-        <Testimonial />
+        {data.map((testimonial) => {
+          return <Testimonial data={testimonial} />
+        })}
       </Carousel>
     </SectionContainer>
   )
