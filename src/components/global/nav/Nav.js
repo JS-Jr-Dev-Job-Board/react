@@ -23,8 +23,8 @@ const Nav = () => {
             </GlobalNavLink>
           </Li>
           <Li>
-            <GlobalNavLink to='/jobs' activeClassName='activeSelected'>
-              jobs
+            <GlobalNavLink to='/developers' activeClassName='activeSelected'>
+              developers
             </GlobalNavLink>
           </Li>
           <Li>

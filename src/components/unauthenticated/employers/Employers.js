@@ -1,10 +1,10 @@
 import React from 'react'
-import { SectionHeader, StyledView } from '../../global/styles/GlobalStyles'
+import { Container } from './EmployerStyles'
 
 const Employers = (props) => {
   return (
-    <StyledView>
-      <SectionHeader>Welcome Employers!</SectionHeader>
+    <Container>
+      <h2>Welcome Employers!</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
         reiciendis. Praesentium facere doloribus at, mollitia corporis repellat?
@@ -22,7 +22,7 @@ const Employers = (props) => {
         cumque quaerat expedita velit? Reiciendis voluptates sit maiores
         deserunt soluta praesentium laborum fuga tenetur!
       </p>
-    </StyledView>
+    </Container>
   )
 }
 

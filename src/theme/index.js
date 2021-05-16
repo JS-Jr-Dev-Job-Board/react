@@ -4,11 +4,11 @@ const theme = {
     2: '1024px',
     3: '768px',
     4: '550px',
-    5: '300px'
+    5: '300px',
   },
   font: {
     primary: '',
-    secondary: ''
+    secondary: '',
   },
   size: {
     placeholder: '1.4rem',
@@ -16,12 +16,15 @@ const theme = {
     small: '2.4rem',
     medium: '3.6rem',
     large: '8rem',
-    largest: '16rem'
+    largest: '16rem',
   },
   radius: {
     slight: '8px',
-    serious: '32px'
-  }
+    serious: '32px',
+  },
+  height: {
+    container: '80vh',
+  },
 }
 
 export default theme
