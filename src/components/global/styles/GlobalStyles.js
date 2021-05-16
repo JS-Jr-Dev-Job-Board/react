@@ -88,4 +88,8 @@ export const Input = styled.input`
 `
 export const Label = styled.label``
 
+export const Img = styled.img`
+  border-radius: 50%;
+`
+
 export default GlobalStyle

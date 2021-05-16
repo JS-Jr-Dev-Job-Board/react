@@ -1,13 +1,8 @@
 import React from 'react'
 import { useRecoilValue, selector } from 'recoil'
 import { Button } from '../styles/GlobalStyles'
-import {
-  Container,
-  Card,
-  Img,
-  PositionText,
-  DescriptionText
-} from './JobStyles'
+import { Img } from '../styles/GlobalStyles.js'
+import { Container, Card, PositionText, DescriptionText } from './JobStyles'
 
 const url = `https://js-jr-dev-board.herokuapp.com/api/v1/jobs`
 

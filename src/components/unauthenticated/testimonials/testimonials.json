@@ -1,0 +1,20 @@
+[
+  {
+    "stars": [1, 2, 3, 4, 5],
+    "text": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem",
+    "name": "Brian",
+    "id": 1
+  },
+  {
+    "stars": [1, 2, 3, 4],
+    "text": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem",
+    "name": "Ryan",
+    "id": 2
+  },
+  {
+    "stars": [1, 2, 3],
+    "text": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem",
+    "name": "Claud",
+    "id": 3
+  }
+]
