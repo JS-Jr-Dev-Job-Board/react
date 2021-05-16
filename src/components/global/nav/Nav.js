@@ -7,7 +7,9 @@ import { A } from '../styles/LinksGlobalStyles'
 const Nav = () => {
   return (
     <Container>
-      <h2>Career Shock, LLC</h2>
+      <h2>
+        <NavLink to='/dashboard'>Career Shock, LLC</NavLink>
+      </h2>
       <NavLinks>
         <Ul>
           <Li>
