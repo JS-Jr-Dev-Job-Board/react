@@ -10,6 +10,7 @@ export const AuthView = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: ${(props) => props.theme.height.container};
   p a {
     text-decoration: none;
     color: #0467fb;

@@ -6,6 +6,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   background: #eee;
+  height: ${(props) => props.theme.height.container};
 `
 
 export const Teaser = styled.h4`
