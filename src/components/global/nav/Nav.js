@@ -2,35 +2,35 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { Container, Ul, NavLinks, Li } from './NavStyles'
 import { Button } from '../styles/GlobalStyles'
-import { A } from '../styles/LinksGlobalStyles'
+import { GlobalNavLink } from '../styles/LinksGlobalStyles'
 
 const Nav = () => {
   return (
     <Container>
       <h2>
-        <NavLink to='/dashboard'>Career Shock, LLC</NavLink>
+        <GlobalNavLink to='/dashboard'>Career Shock, LLC</GlobalNavLink>
       </h2>
       <NavLinks>
         <Ul>
           <Li>
-            <NavLink to='/' exact activeClassName='activeSelected'>
-              <A>home</A>
-            </NavLink>
+            <GlobalNavLink to='/' exact activeClassName='activeSelected'>
+              home
+            </GlobalNavLink>
           </Li>
           <Li>
-            <NavLink to='/team' activeClassName='activeSelected'>
-              <A>team</A>
-            </NavLink>
+            <GlobalNavLink to='/team' activeClassName='activeSelected'>
+              team
+            </GlobalNavLink>
           </Li>
           <Li>
-            <NavLink to='/jobs' activeClassName='activeSelected'>
-              <A>jobs</A>
-            </NavLink>
+            <GlobalNavLink to='/jobs' activeClassName='activeSelected'>
+              jobs
+            </GlobalNavLink>
           </Li>
           <Li>
-            <NavLink to='/employers' activeClassName='activeSelected'>
-              <A>employers</A>
-            </NavLink>
+            <GlobalNavLink to='/employers' activeClassName='activeSelected'>
+              employers
+            </GlobalNavLink>
           </Li>
         </Ul>
         <NavLink to='/login' activeClassName='buttonActiveSelected'>
