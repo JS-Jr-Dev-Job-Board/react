@@ -5,16 +5,20 @@ import {
   TestimonialRoot,
   TestimonialBody,
   TestimonialText,
-  TestimonialName
+  TestimonialName,
+  Stars
 } from '../TestimonialStyles'
 
 const Testimonial = ({ data }) => {
-  console.log(data)
   return (
     <TestimonialRoot>
       <Img src='https://via.placeholder.com/150' alt='' srcset='' />
       <TestimonialBody>
-        <AiFillStar />
+        <Stars>
+          {data.stars.map((star) => (
+            <AiFillStar />
+          ))}
+        </Stars>
         <TestimonialText>{data.text}</TestimonialText>
         <TestimonialName>{data.name}</TestimonialName>
       </TestimonialBody>

@@ -11,7 +11,7 @@ import data from './testimonials.json'
 
 const Testimonials = () => {
   return (
-    <SectionContainer column>
+    <SectionContainer column wrap>
       <SectionHeader>Testimonials</SectionHeader>
       <Carousel>
         {data.map((testimonial) => {

@@ -1,29 +1,26 @@
 import styled from 'styled-components'
 
-// export const Testimonial = styled.div`
-// `
-
 export const Carousel = styled.div`
-  border: 1px solid red;
-  display: flex;
   width: 100%;
-`
-
-export const TestimonialRoot = styled.div`
-  border: 1px solid red;
-  margin: 2px;
-  padding: 2px;
-
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+`
+export const TestimonialRoot = styled.div`
+  border: 1px solid blue;
+  margin: 10px;
+  padding: 6px;
+  max-width: 300px;
+
+  display: flex;
   align-items: center;
-  /* flex-direction: column; */
+  justify-content: center;
 `
 export const TestimonialBody = styled.div`
   display: flex;
   flex-direction: column;
+  margin-left: 10px;
 `
 export const TestimonialName = styled.p``
 export const TestimonialText = styled.p``
-
-// export const Testimonial = styled.div``
+export const Stars = styled.div``
