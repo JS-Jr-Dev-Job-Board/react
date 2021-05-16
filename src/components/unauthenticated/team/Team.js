@@ -1,11 +1,5 @@
 import React from 'react'
-import {
-  // RecoilRoot,
-  atom,
-  // selector,
-  // useRecoilState,
-  useRecoilValue,
-} from 'recoil'
+import { atom, useRecoilValue } from 'recoil'
 import styled from 'styled-components'
 import TeamMember from './TeamMember'
 
@@ -21,7 +15,7 @@ const teamMemberState = atom({
   ],
 })
 
-function AboutUs() {
+const Team = () => {
   const teamMembers = useRecoilValue(teamMemberState)
 
   const Container = styled.div`
@@ -35,7 +29,7 @@ function AboutUs() {
 
   return (
     <Container>
-      <h1>About Us</h1>
+      <h1>Career Shock Team</h1>
       <Teaser>
         This is a team of motivated Lambda School students who care about the
         field they are entering and helping other junior devs find a quality
@@ -48,4 +42,4 @@ function AboutUs() {
   )
 }
 
-export default AboutUs
+export default Team
