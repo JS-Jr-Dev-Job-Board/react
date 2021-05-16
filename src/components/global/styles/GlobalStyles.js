@@ -33,6 +33,7 @@ export const Button = styled.button`
   outline: none;
   border: none;
   cursor: pointer;
+  align-self: center;
 
   &:hover {
     transition: all 0.3s ease-out;

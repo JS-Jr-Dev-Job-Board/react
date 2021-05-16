@@ -31,7 +31,6 @@ const SignIn = () => {
   //     .catch((res) => {
   //       debugger
   //     })
-  //   console.log(data)
   // }
 
   return (
