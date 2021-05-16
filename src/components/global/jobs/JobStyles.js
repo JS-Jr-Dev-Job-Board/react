@@ -14,10 +14,6 @@ export const Card = styled.div`
   flex-direction: column;
 `
 
-export const Img = styled.img`
-  border-radius: 50%;
-`
-
 export const PositionText = styled.h6`
   font-size: 20px;
   font-weight: bold;

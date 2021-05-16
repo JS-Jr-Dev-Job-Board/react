@@ -1,24 +1,22 @@
 import React from 'react'
-import { Container } from './TestimonialStyles'
+
 import {
   SectionHeader,
   SectionContainer
 } from '../../global/styles/GlobalStyles'
+import { Carousel } from './TestimonialStyles'
+
+import Testimonial from './testimonial/Testimonial'
 
 const Testimonials = () => {
   return (
     <SectionContainer column>
       <SectionHeader>Testimonials</SectionHeader>
-      <div className='imgContainer'>
-        <img
-          alt={'placeholder'}
-          src='https://i.ibb.co/N7JcvCR/testimonial1.jpg'
-        />
-        <img
-          alt={'placeholder'}
-          src='https://i.ibb.co/N7JcvCR/testimonial1.jpg'
-        />
-      </div>
+      {/* Carousel */}
+      <Carousel>
+        <Testimonial />
+        <Testimonial />
+      </Carousel>
     </SectionContainer>
   )
 }
