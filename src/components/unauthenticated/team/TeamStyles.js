@@ -22,7 +22,7 @@ export const MemberCard = styled.div`
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  margin-bottom: 1%;
+  margin-bottom: 1.25%;
 
   h3 {
     margin: 1% 0 0 0;
