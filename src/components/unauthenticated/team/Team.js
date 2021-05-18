@@ -5,7 +5,7 @@ import TeamMember from './TeamMember'
 function Team() {
   return (
     <Container>
-      <h1>About Us</h1>
+      <h1>Career Shock Team</h1>
       <Teaser>
         This is a team of motivated Lambda School students who care about the
         field they are entering and helping other junior devs find a quality

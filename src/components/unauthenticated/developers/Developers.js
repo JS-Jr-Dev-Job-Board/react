@@ -1,10 +1,10 @@
 import React from 'react'
-import { ViewHeader, StyledView } from '../../global/styles/GlobalStyles'
+import { Container } from './DeveloperStyles'
 
 const Developers = (props) => {
   return (
-    <StyledView>
-      <ViewHeader>Welcome Developers!</ViewHeader>
+    <Container>
+      <h2>Welcome Developers!</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
         reiciendis. Praesentium facere doloribus at, mollitia corporis repellat?
@@ -17,7 +17,7 @@ const Developers = (props) => {
         magnam nobis optio quaerat sequi corrupti necessitatibus beatae in sunt
         quibusdam.
       </p>
-    </StyledView>
+    </Container>
   )
 }
 

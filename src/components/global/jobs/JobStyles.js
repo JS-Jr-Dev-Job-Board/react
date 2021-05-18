@@ -9,13 +9,13 @@ export const Container = styled.div`
 
 export const Card = styled.div`
   border: 1px solid gray;
+  padding: 10px;
   flex-basis: 30%;
   display: flex;
   flex-direction: column;
-`
-
-export const Img = styled.img`
-  border-radius: 50%;
+  * {
+    margin: 8px;
+  }
 `
 
 export const PositionText = styled.h6`

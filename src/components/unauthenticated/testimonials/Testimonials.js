@@ -1,22 +1,24 @@
 import React from 'react'
-import { Container } from './TestimonialStyles'
+
+import {
+  SectionHeader,
+  SectionContainer
+} from '../../global/styles/GlobalStyles'
+import { Carousel } from './TestimonialStyles'
+
+import Testimonial from './testimonial/Testimonial'
+import data from './testimonials.json'
 
 const Testimonials = () => {
   return (
-    // <Box height='small' width='medium' overflow='hidden'>
-    // <Carousel fill>
-    <Container>
-      <img
-        alt={'placeholder'}
-        src='https://i.ibb.co/N7JcvCR/testimonial1.jpg'
-      />
-      <img
-        alt={'placeholder'}
-        src='https://i.ibb.co/N7JcvCR/testimonial1.jpg'
-      />
-    </Container>
-    // </Carousel>
-    // </Box>
+    <SectionContainer column>
+      <SectionHeader>Testimonials</SectionHeader>
+      <Carousel>
+        {data.map((testimonial) => {
+          return <Testimonial data={testimonial} key={testimonial.id} />
+        })}
+      </Carousel>
+    </SectionContainer>
   )
 }
 

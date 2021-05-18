@@ -33,6 +33,7 @@ export const Button = styled.button`
   outline: none;
   border: none;
   cursor: pointer;
+  align-self: center;
 
   &:hover {
     transition: all 0.3s ease-out;
@@ -44,11 +45,24 @@ export const Button = styled.button`
     width: 100%;
   }
 `
-export const ViewHeader = styled.h2`
-  /* border: 2px solid blue; */
+export const SectionHeader = styled.h2`
   margin: 10px 0;
   font-size: ${(props) => props.theme.size.medium};
 `
+
+//optional; can be passed the boolean prop column to set flex direction to column. Default is row.
+//optional; can be passed a prop called background which takes a string hex value that will be applied to the background-color property.
+export const SectionContainer = styled.div`
+  display: flex;
+  flex-direction: ${({ column }) => (column ? 'column' : 'row')};
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: ${({ background }) => (background ? background : null)};
+  margin-bottom: 20px;
+  padding: 20px;
+`
+
 export const StyledView = styled.div`
   margin: 30px auto;
   max-width: 80%;
@@ -73,5 +87,9 @@ export const Input = styled.input`
   outline: none;
 `
 export const Label = styled.label``
+
+export const Img = styled.img`
+  border-radius: 50%;
+`
 
 export default GlobalStyle

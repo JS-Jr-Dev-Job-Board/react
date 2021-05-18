@@ -6,13 +6,8 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  button {
-    font-size: 20px;
-    outline: none;
-    border: none;
-    padding: 5px 20px;
-  }
 `
+
 export const NavLinks = styled.div`
   display: flex;
   justify-content: space-around;
@@ -24,10 +19,9 @@ export const Ul = styled.ul`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  li {
-    font-size: 20px;
-    padding: 5px 10px;
-  }
 `
 
-export const Li = styled.li``
+export const Li = styled.li`
+  font-size: 20px;
+  padding: 5px 10px;
+`
