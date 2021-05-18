@@ -1,11 +1,13 @@
-import React from 'react'
+import { MemberCard } from './TeamStyles'
+
 const TeamMember = ({ member }) => {
   return (
-    <div className='member'>
-      {/* Add image */}
+    <MemberCard>
+      <img src={member.image} alt={member.name} />
       <h3>{member.name}</h3>
-      {/* Add description */}
-    </div>
+      <a href={member.github}>GitHub</a>
+      <a href={member.linkedin}>LinkedIn</a>
+    </MemberCard>
   )
 }
 
