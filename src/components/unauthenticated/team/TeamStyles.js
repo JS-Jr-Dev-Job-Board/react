@@ -4,13 +4,18 @@ export const Container = styled.section`
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  color: ${(props) => props.theme.color.primary};
+  color: ${(pr) => pr.theme.color.primary};
   background: ${(pr) => pr.theme.color.background};
   min-width: 100%;
+
+  h1 {
+    font-size: ${(pr) => pr.theme.size.medium};
+  }
 `
 
 export const Teaser = styled.p`
   width: clamp(45ch, 50%, 75ch);
+  margin-bottom: 2%;
 `
 export const TeamContainer = styled.div`
   display: flex;
@@ -26,6 +31,7 @@ export const MemberCard = styled.div`
 
   h3 {
     margin: 1% 0 0 0;
+    font-size: ${(pr) => pr.theme.size.small};
   }
   img {
     width: 50%;
