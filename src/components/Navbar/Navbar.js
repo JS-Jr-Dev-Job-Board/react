@@ -49,7 +49,7 @@ const Navbar = () => {
       <IconContext.Provider value={{ color: '#fff' }}>
         <Nav>
           <NavbarContainer>
-            <NavLogo to='Home' onClick={closeMobileMenu}>
+            <NavLogo to='/' onClick={closeMobileMenu}>
               <NavIcon />
               CAREER SHOCK
             </NavLogo>

@@ -4,10 +4,8 @@ import './css/index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter as Router } from 'react-router-dom'
-
-import { Auth0Provider } from '@auth0/auth0-react'
 import {
-  RecoilRoot,
+  RecoilRoot
   // atom,
   // selector,
   // useRecoilState,
@@ -16,17 +14,11 @@ import {
 
 ReactDOM.render(
   <React.StrictMode>
-      <RecoilRoot>
-        <Auth0Provider
-          domain='YOUR_DOMAIN'
-          clientId='YOUR_CLIENT_ID'
-          redirectUri={window.location.origin}
-        >
-          <Router>
-            <App />
-          </Router>
-        </Auth0Provider>
-      </RecoilRoot>
+    <RecoilRoot>
+      <Router>
+        <App />
+      </Router>
+    </RecoilRoot>
   </React.StrictMode>,
   document.getElementById('root')
 )

@@ -1,8 +1,5 @@
 import React from 'react'
 import JobCard from './jobcard'
-// import { Grommet, Box, Grid, Heading } from 'grommet'
-// import { grommet } from 'grommet/themes'
-//import GrommetTheme from "../theme/grommetTheme"
 
 const Jobs = ({ jobCard }) => {
   return (
