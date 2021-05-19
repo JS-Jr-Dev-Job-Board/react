@@ -8,5 +8,8 @@ export const Container = styled.div`
 export const Col = styled(C)`
   color: #aaa;
   background: orange;
+  padding: 5px;
 `
-export const Row = styled(R)``
+export const Row = styled(R)`
+  margin: 10px 0;
+`

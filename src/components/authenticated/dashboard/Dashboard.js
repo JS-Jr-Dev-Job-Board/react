@@ -1,6 +1,5 @@
 import React from 'react'
-import { Row } from 'react-styled-flexboxgrid'
-import { Container, Col } from './DashboardStyles'
+import { Container, Col, Row } from './DashboardStyles'
 
 const Dashboard = () => {
   return (
