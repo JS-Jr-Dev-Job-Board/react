@@ -1,27 +1,24 @@
 import React from 'react'
-import { Col, Row } from 'react-styled-flexboxgrid'
-import { Container } from './DashboardStyles'
+import { Row } from 'react-styled-flexboxgrid'
+import { Container, Col } from './DashboardStyles'
 
 const Dashboard = () => {
   return (
     <Container>
       <Row>
-        <Col style={{ background: 'red' }} xs>
+        <Col xs={6} sm={6} md={8} lg={10}>
           one box
         </Col>
-        <Col style={{ background: 'white' }} xs>
+        <Col xs={6} sm={6} md={8} lg={10}>
           two box
         </Col>
       </Row>
       <Row>
-        <Col style={{ background: 'blue' }} xs>
-          three box
+        <Col xs={6} sm={6} md={8} lg={10}>
+          one box
         </Col>
-        <Col style={{ background: 'orange' }} xs>
-          four box
-        </Col>
-        <Col style={{ background: 'green' }} xs>
-          five box
+        <Col xs={6} sm={6} md={8} lg={10}>
+          two box
         </Col>
       </Row>
     </Container>

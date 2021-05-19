@@ -23,6 +23,7 @@ export const Container = styled.div`
     padding-left: 30px;
   }
 `
+
 export const Button = styled.button`
   border-radius: 4px;
   background: ${({ primary }) => (primary ? '#4b59f7' : '#0467FB')};
