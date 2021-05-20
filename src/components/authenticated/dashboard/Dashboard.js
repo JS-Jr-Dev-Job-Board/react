@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Col, Row } from './DashboardStyles'
+import Tracker from './components/Tracker/Tracker'
 
 const Dashboard = () => {
   return (
@@ -20,6 +21,17 @@ const Dashboard = () => {
           two box
         </Col>
       </Row>
+
+      {/* rendering here for dev only */}
+      <Tracker
+        data={[
+          { title: 'cover letters', number: 8 },
+          { title: 'resume', number: 20 },
+          { title: 'apply', number: 50 },
+          { title: 'follow up', number: 20 }
+        ]}
+      />
+      {/* rendering here for dev only */}
     </Container>
   )
 }
