@@ -9,7 +9,7 @@ const Applied = ({ data }) => {
       <CardTitle>Applied</CardTitle>
       <CardContainer>
         {data.map((card, i) => (
-          <TrackerCard data={card} key={i} className={data.title} />
+          <TrackerCard data={card} key={i} />
         ))}
       </CardContainer>
     </TrackerRoot>

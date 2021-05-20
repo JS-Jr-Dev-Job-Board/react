@@ -6,14 +6,8 @@ import {
 } from './TrackerCard.elements'
 
 const TrackerCard = ({ data }) => {
-  const cardTypes = [
-    { title: 'coverLetters', color: '', bgColor: '' },
-    { title: 'resume', color: '', bgColor: '' },
-    { title: 'apply', color: '', bgColor: '' },
-    { title: 'followUp', color: '', bgColor: '' }
-  ]
   return (
-    <TrackerCardRoot type={data.title}>
+    <TrackerCardRoot type={data.title} bgColor={data.bgColor}>
       <TrackerCardTitle>{data.title}</TrackerCardTitle>
       <TrackerCardNumber>{data.number}</TrackerCardNumber>
     </TrackerCardRoot>
