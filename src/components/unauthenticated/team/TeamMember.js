@@ -1,12 +1,15 @@
 import { MemberCard } from './TeamStyles'
+import { GlobalExternalLink } from '../../global/styles/LinksGlobalStyles'
 
 const TeamMember = ({ member }) => {
   return (
     <MemberCard>
-      <img src={member.image} alt={member.name} />
+      <a href={member.linkedin}>
+        <img src={member.image} alt={member.name} />
+      </a>
       <h3>{member.name}</h3>
-      <a href={member.github}>GitHub</a>
-      <a href={member.linkedin}>LinkedIn</a>
+      <GlobalExternalLink href={member.github}>GitHub</GlobalExternalLink>
+      <GlobalExternalLink href={member.linkedin}>LinkedIn</GlobalExternalLink>
     </MemberCard>
   )
 }

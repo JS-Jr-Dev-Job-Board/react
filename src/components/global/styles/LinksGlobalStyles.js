@@ -18,6 +18,20 @@ export const GlobalLink = styled(Link)`
     margin-bottom: 30px;
   }
 `
+export const GlobalExternalLink = styled.a`
+  color: #aaa;
+  justify-self: start;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 820px) {
+    margin-bottom: 30px;
+  }
+`
+
 export const GlobalNavLink = styled(NavLink)`
   color: orange;
   justify-self: start;
