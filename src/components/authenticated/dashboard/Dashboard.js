@@ -25,10 +25,10 @@ const Dashboard = () => {
       {/* rendering here for dev only */}
       <Tracker
         data={[
-          { title: 'cover letters', number: 8 },
-          { title: 'resume', number: 20 },
-          { title: 'apply', number: 50 },
-          { title: 'follow up', number: 20 }
+          { title: 'cover letters', number: 8, bgColor: '', borderColor: '' },
+          { title: 'resume', number: 20, bgColor: '', borderColor: '' },
+          { title: 'apply', number: 50, bgColor: '', borderColor: '' },
+          { title: 'follow up', number: 20, bgColor: '', borderColor: '' }
         ]}
       />
       {/* rendering here for dev only */}

@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 
 export const TrackerCardRoot = styled.div`
-  /* border: 10px solid ${(props) => `${props.bgColor}` || '#ffee'}; */
-  border: 2px solid black;
-  background-color: ${(props) => props.bgColor || '#ffee'};
+  border: 1px solid black;
+  background-color: ${(props) => `${props.bgColor}` || '#ffee'};
   width: 200px;
   border-radius: 8px;
   display: flex;
@@ -11,4 +10,13 @@ export const TrackerCardRoot = styled.div`
   align-items: center;
   padding: 10px;
   margin: 10px;
+`
+
+export const TrackerCardTitle = styled.p`
+  text-transform: capitalize;
+`
+
+export const TrackerCardNumber = styled.p`
+  font-weight: 700;
+  font-size: 28px;
 `

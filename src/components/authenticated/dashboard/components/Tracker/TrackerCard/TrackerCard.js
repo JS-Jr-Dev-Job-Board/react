@@ -1,12 +1,21 @@
 import React from 'react'
-import { TrackerCardRoot } from './TrackerCard.elements'
+import {
+  TrackerCardRoot,
+  TrackerCardTitle,
+  TrackerCardNumber
+} from './TrackerCard.elements'
 
 const TrackerCard = ({ data }) => {
-  console.log(data)
+  const cardTypes = [
+    { title: 'coverLetters', color: '', bgColor: '' },
+    { title: 'resume', color: '', bgColor: '' },
+    { title: 'apply', color: '', bgColor: '' },
+    { title: 'followUp', color: '', bgColor: '' }
+  ]
   return (
-    <TrackerCardRoot bgColor={'#ff00ff'}>
-      <p>{data.title}</p>
-      <p>{data.number}</p>
+    <TrackerCardRoot type={data.title}>
+      <TrackerCardTitle>{data.title}</TrackerCardTitle>
+      <TrackerCardNumber>{data.number}</TrackerCardNumber>
     </TrackerCardRoot>
   )
 }
