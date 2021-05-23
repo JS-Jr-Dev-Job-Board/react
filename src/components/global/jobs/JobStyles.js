@@ -14,7 +14,7 @@ export const Card = styled.div`
   flex-direction: column;
   height: 100%;
   * {
-    /* margin: 8px; */
+    margin: 8px;
   }
 `
 
@@ -26,4 +26,11 @@ export const PositionText = styled.h6`
 export const DescriptionText = styled.p`
   overflow: hidden;
   text-overflow: ellipsis;
+`
+
+export const ImgContainer = styled.div`
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
 `
