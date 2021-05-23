@@ -29,7 +29,9 @@ const JobCard = ({ jobCard }) => {
       {jobsArr.map((job) => {
         return (
           <Card>
-            <Img src='https://via.placeholder.com/150' alt='' srcset='' />
+            <div style={{border: '1px solid black', display: 'flex', justifyContent: 'center', margin: '0 auto'}}>
+              <Img src='https://via.placeholder.com/150' alt='' srcset='' />
+            </div>
             <PositionText>{job.position}</PositionText>
             <DescriptionText>{job.description}</DescriptionText>
             <Button>Apply</Button>
