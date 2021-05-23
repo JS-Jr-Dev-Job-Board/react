@@ -1,11 +1,12 @@
 import React from 'react'
 import JobCard from '../../global/jobs/JobCard'
-import { Header, Container } from './JobStyles'
+import { Container } from './JobStyles'
+import { SectionHeader } from '../../global/styles/GlobalStyles'
 
 const Jobs = () => {
   return (
-    <Container column background='#d3d3d3'>
-      <Header>Jobs</Header>
+    <Container>
+      <SectionHeader>Jobs</SectionHeader>
       <JobCard />
     </Container>
   )
