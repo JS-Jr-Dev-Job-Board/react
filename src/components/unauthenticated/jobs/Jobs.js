@@ -6,7 +6,7 @@ import { SectionHeader } from '../../global/styles/GlobalStyles'
 const Jobs = () => {
   return (
     <Container>
-      <SectionHeader>Jobs</SectionHeader>
+      {/* <SectionHeader>Jobs</SectionHeader> */}
       <JobCard />
     </Container>
   )

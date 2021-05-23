@@ -23,7 +23,7 @@ const theme = {
     serious: '32px',
   },
   height: {
-    container: '80vh',
+    container: '78vh',
   },
   flexboxgrid: {
     // Defaults
