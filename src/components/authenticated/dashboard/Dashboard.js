@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Col, Row } from './DashboardStyles'
 import Tracker from './components/Tracker/Tracker'
+import SingleJobResult from './components/SingleJobResult/SingleJobResult'
 
 const Dashboard = () => {
   return (
@@ -31,6 +32,11 @@ const Dashboard = () => {
           { title: 'follow up', number: 20, bgColor: '#E29873' }
         ]}
       />
+      {/* rendering here for dev only */}
+
+      {/* rendering here for dev only */}
+      <SingleJobResult jobData={{title: 'software engineer', type: 'node', date: '5/23/2021'}}/>
+      <SingleJobResult jobData={{title: 'front end developer', type: 'react', date: '5/18/2021'}}/>
       {/* rendering here for dev only */}
     </Container>
   )
