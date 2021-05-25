@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Col, Row } from './DashboardStyles'
 import Tracker from './components/Tracker/Tracker'
+import JobResults from './components/JobResults/JobResults'
 
 const Dashboard = () => {
   return (
@@ -45,7 +46,7 @@ const Dashboard = () => {
       {/* rendering here for dev only */}
         </Col>
         <Col xs={6} sm={6} md={8} lg={10}>
-          {/* rendering here for dev only */}
+
       <Tracker
         data={[
           { title: 'cover letters', number: 8, bgColor: '#008080' },
@@ -54,11 +55,10 @@ const Dashboard = () => {
           { title: 'follow up', number: 20, bgColor: '#E29873' }
         ]}
       />
-      {/* rendering here for dev only */}
-        </Col>
-      </Row>
 
-      
+
+      <JobResults />
+
     </Container>
   )
 }
