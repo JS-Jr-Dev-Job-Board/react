@@ -1,11 +1,25 @@
 import styled from 'styled-components'
 
 export const JobResultRoot = styled.div`
-  display: flex;
+  /* border: 2px solid red; */
+
+  background: #eee;
+  display: grid;
+  grid-template-columns: repeat(3, 150px) 100px;
   justify-content: space-between;
-  max-width: 450px;
   border-bottom: 1px solid #aeaeae;
-  padding: 0 10px;
+  padding: 5px 10px;
+
+  transition: 0.3s;
+  button {
+    transition: 0.6s;
+  }
+  &:hover {
+    background: #dadada;
+    button {
+      background: tomato;
+    }
+  }
 `
 
 export const JobTitle = styled.p`
