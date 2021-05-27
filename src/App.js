@@ -20,6 +20,11 @@ import darkTheme from './theme/darkTheme'
 import lightTheme from './theme/lightTheme'
 import { Container } from './AppStyles'
 
+import './App.css'
+
+
+
+
 const App = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(false)
 

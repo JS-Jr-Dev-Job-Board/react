@@ -1,6 +1,5 @@
 import React from "react"
 
-// create in styles //
 import {
   SidebarContainer,
   Icon,
