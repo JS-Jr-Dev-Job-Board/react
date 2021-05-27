@@ -2,7 +2,13 @@ import React from 'react'
 import { useRecoilValue, selector } from 'recoil'
 import { Button } from '../styles/GlobalStyles'
 import { Img } from '../styles/GlobalStyles.js'
-import { Container, Card, PositionText, DescriptionText } from './JobStyles'
+import {
+  Container,
+  Card,
+  PositionText,
+  DescriptionText,
+  ImgContainer
+} from './JobStyles'
 
 const url = `https://js-jr-dev-board.herokuapp.com/api/v1/jobs`
 
@@ -29,7 +35,9 @@ const JobCard = ({ jobCard }) => {
       {jobsArr.map((job) => {
         return (
           <Card>
-            <Img src='https://via.placeholder.com/150' alt='' srcset='' />
+            <ImgContainer>
+              <Img src='https://via.placeholder.com/150' alt='' srcset='' />
+            </ImgContainer>
             <PositionText>{job.position}</PositionText>
             <DescriptionText>{job.description}</DescriptionText>
             <Button>Apply</Button>

@@ -13,7 +13,6 @@ function Team() {
       </Teaser>
       <TeamContainer>
         {profileData.map((member) => {
-          console.log(member)
           return <TeamMember key={member.name} member={member} />
         })}
       </TeamContainer>

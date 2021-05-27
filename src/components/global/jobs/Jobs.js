@@ -8,7 +8,7 @@ const Jobs = ({ jobCard }) => {
       {/* <Heading align='center' justify='center' textAlign='center'>
         Job Board
       </Heading> */}
-      <h2>Job board heading</h2>
+      {/* <h2>Job board heading</h2> */}
       {/* <Grid
         gap='medium'
         pad={{ horizontal: 'xxlarge' }}
