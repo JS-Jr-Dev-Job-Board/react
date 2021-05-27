@@ -2,7 +2,6 @@ import theme from './index'
 
 const lightTheme = {
   ...theme,
-  // None of these are set colors
   color: {
     background: 'white',
     linkHover: '#6d76f7',

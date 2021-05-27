@@ -2,7 +2,6 @@ import theme from './index'
 
 const darkTheme = {
   ...theme,
-  // None of these are set colors
   color: {
     background: 'black',
     linkHover: '#006400',
