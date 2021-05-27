@@ -1,4 +1,6 @@
 import React from "react"
+
+// create in styles //
 import {
   SidebarContainer,
   Icon,
@@ -8,9 +10,9 @@ import {
   SidebarRoute,
   SidebarWrapper,
   SidebarMenu,
-} from "./SidebarElement"
+} from "./SidebarStyles"
 
-const sidebar = ({ isOpen, toggle }) => {
+const Sidebar = ({ isOpen, toggle }) => {
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
       <Icon onClick={toggle}>
@@ -42,4 +44,4 @@ const sidebar = ({ isOpen, toggle }) => {
   );
 };
 
-export default sidebar
+export default Sidebar
