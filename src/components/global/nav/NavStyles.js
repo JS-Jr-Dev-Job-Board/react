@@ -13,6 +13,7 @@ export const NavLinks = styled.div`
   display: flex;
   justify-content: space-around;
   width: 35%;
+  margin-right: 42px;
 `
 
 export const Ul = styled.ul`
