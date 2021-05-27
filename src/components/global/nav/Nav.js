@@ -4,6 +4,7 @@ import { Container, Ul, NavLinks, Li } from './NavStyles'
 import { Button } from '../styles/GlobalStyles'
 import { GlobalNavLink } from '../styles/LinksGlobalStyles'
 
+
 const Nav = () => {
   return (
     <Container>

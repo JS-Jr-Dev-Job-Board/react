@@ -14,9 +14,18 @@ import Login from './components/unauthenticated/auth_forms/Login'
 import Footer from './components/global/footer/Footer'
 import Dashboard from './components/authenticated/dashboard/Dashboard'
 
+//import Sidebar from './components/global/sidebar/Sidebar'
+
+
+
 import darkTheme from './theme/darkTheme'
 import lightTheme from './theme/lightTheme'
 import { Container } from './AppStyles'
+
+import './App.css'
+
+
+
 
 const App = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(false)

@@ -10,7 +10,7 @@ export const GlobalLink = styled(Link)`
   justify-self: start;
   cursor: pointer;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 2 rem;
   display: flex;
   align-items: center;
 
@@ -37,9 +37,10 @@ export const GlobalNavLink = styled(NavLink)`
   justify-self: start;
   cursor: pointer;
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 2 rem;
   display: flex;
   align-items: center;
+
 
   @media screen and (max-width: 820px) {
     margin-bottom: 30px;
