@@ -24,5 +24,5 @@ export const TextContainer = styled.div`
 
 export const Text = styled.p`
   padding-right: 15px;
-  font-size: 20px;
+  font-size: 15px;
 `

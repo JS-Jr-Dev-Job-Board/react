@@ -10,7 +10,7 @@ export const GlobalLink = styled(Link)`
   justify-self: start;
   cursor: pointer;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 2 rem;
   display: flex;
   align-items: center;
 
